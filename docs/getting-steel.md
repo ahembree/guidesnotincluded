@@ -30,7 +30,7 @@ Making steel requires Iron, Refined Carbon, and Lime
 
 * Iron can be refined from iron ore using a metal refinery or a rock crusher (iron can also be found on some maps)
 * Refined carbon is made from coal using a Kiln (found under refinement).
-* Lime is made with a rock crusher. Different materials can produce lime: fossil, egg shells, and pokeshell molts. (Fossil can be found in the [oil biome](https://www.guidesnotincluded.com/getting-oil-petroleum-and-plastic).)
+* Lime is made with a rock crusher. Different materials can produce lime: fossil, egg shells, and pokeshell molts. (Fossil can be found in the [oil biome](getting-oil-petroleum-and-plastic.md).)
 
 The metal refinery needs a steady supply of liquid for it to function. This liquid is used as coolant - it comes out hotter than it went in. (How much hotter depends on what metal you are refining.)
 
@@ -74,7 +74,7 @@ This can be done by having the coolant run through a body of water - through rad
 
 The body of water it runs through will heat up and eventually boil, turning to steam. This is where a steam turbine comes in. You can place a steam turbine over the body of water. It will then turn some of the heat into energy. In the process some of the steam will be turned back into (hot) water. This can be dumped back into the body of water.
 
-(To make a steam turbine you will need some [plastic](https://www.guidesnotincluded.com/getting-oil-petroleum-and-plastic).)
+(To make a steam turbine you will need some [plastic](getting-oil-petroleum-and-plastic.md).)
 
 This setup is probably a lot easier to grasp as a picture than my confusing explanations. Here:
 
@@ -84,11 +84,11 @@ This setup is probably a lot easier to grasp as a picture than my confusing expl
 
 The water tank doesn't need to be as large as in the picture above, but make it too small - and use your metal refinery too frequently - and you can get pipe damage from overheating. So too big is better than too small.
 
-This design can be paired with a cooling loop, in which case you would also put a thermo aquatuner in the pool of water. I will cover that later in the guide, but you can see pics of it in the [builds section](https://www.guidesnotincluded.com/aquatuner-steam-turbine-cooling-loo). A cooling loop is also included in the [mini industry](https://www.guidesnotincluded.com/mini-industry) section of the guide (a layout for cramming in a lot of machines in a small space.)
+This design can be paired with a cooling loop, in which case you would also put a thermo aquatuner in the pool of water. I will cover that later in the guide, but you can see pics of it in the [builds section](aquatuner-steam-turbine-cooling-loo.md). A cooling loop is also included in the [mini industry](mini-industry.md) section of the guide (a layout for cramming in a lot of machines in a small space.)
 
 Regarding coolant
 
-Whatever you use as coolant will get hot. So for your coolant you need a liquid that can handle getting hot. Water would boil. Use oil (petroleum works as well.) You can find oil in the [oil biome](https://www.guidesnotincluded.com/getting-oil-petroleum-and-plastic).
+Whatever you use as coolant will get hot. So for your coolant you need a liquid that can handle getting hot. Water would boil. Use oil (petroleum works as well.) You can find oil in the [oil biome](getting-oil-petroleum-and-plastic.md).
 
 The metal refinery needs 400kg of coolant. However, it has a tank that can hold additional coolant. To enable the metal refinery to run non-stop and not have to wait for coolant to fill up, you should fill it with at least twice that amont (800-1200kg).
 

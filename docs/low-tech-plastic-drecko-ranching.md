@@ -19,7 +19,7 @@ Glossy Drecko
 
 Shearing station
 
-Ranching basics are covered [earlier in this guide](https://www.guidesnotincluded.com/ranching-basics). This part is specifically about drecko ranching for plastic.
+Ranching basics are covered [earlier in this guide](ranching-basics.md). This part is specifically about drecko ranching for plastic.
 
 There are two kinds of dreckos: regular and glossy. Both can be sheared using a Shearing Station (unlocked through researching Ranching, then found under stations).
 
@@ -70,7 +70,7 @@ Up and running. Over time this ranch will fill with Glossy Dreckos. (Raise the p
 
 The main thing that can go wrong with this ranch is that it heats up to 30C or above, at which point the Mealwood will stop growing.
 
-A short-term solution is to build a tempshift plate (found under Utilities) made of ice above the Mealwood. It will melt and cool water will spill over them. (Then repeat as needed.) A long-term solution is to run a [cooling loop](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop) past the Mealwood.
+A short-term solution is to build a tempshift plate (found under Utilities) made of ice above the Mealwood. It will melt and cool water will spill over them. (Then repeat as needed.) A long-term solution is to run a [cooling loop](thermo-aquatuner-steam-turbine-cooling-loop.md) past the Mealwood.
 
 Finally, a picture of a (fairly complete) plastic ranch. There have been some small changes to the game since then. The critter drop-off looks different, and there is a castle-like thing you can add for a happiness buff for critters. However, the basic idea is still the same as in the pic.
 

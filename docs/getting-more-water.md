@@ -33,7 +33,7 @@ There are two things to keep in mind when turning non-water into water: germs an
 
 Regarding germs. In general, all liquids you find "lying around" will be germ-free. Also, most vents output germ-free liquids; the exception being the polluted water vent (the normal temperature one, not the cool one).
 
-If you have any polluted water that is the result of a dupe "accident" or vomiting, then that will have germs in it. Those germs will also spread to nearby liquids. (Dealing with germy water is a separate thing, covered in the section on [recycling toilet water](https://www.guidesnotincluded.com/recycling-toilet-water).)
+If you have any polluted water that is the result of a dupe "accident" or vomiting, then that will have germs in it. Those germs will also spread to nearby liquids. (Dealing with germy water is a separate thing, covered in the section on [recycling toilet water](recycling-toilet-water.md).)
 
 Regarding temperature. The freezing point of polluted water and salt water is lower than the freezing point of water. If you pump freezing (below +-0C) salt water or polluted water through a desalinator or water sieve, you can end up breaking your pipes in the refining process.
 
@@ -67,7 +67,7 @@ The freezing point of water is -0.6C. Avoid sending any liquids that are below t
 
 The good news is that if you have liquid that is too cold, that means you have free cooling available. So you can for instance snake cold water from a cool geyser around your base and cool down your base while heating up the water. The bad news is that it isn't easy to control that process - how cold an area will get or how hot the water will get.
 
-Over time you might pump enough freezing water through your base that it becomes freezing cold, too. But this is an easy early-game solution to cooling down your base, and something you can replace with a more controlled cooling loop later. ([Cooling loops](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop) are covered later in the guide.)
+Over time you might pump enough freezing water through your base that it becomes freezing cold, too. But this is an easy early-game solution to cooling down your base, and something you can replace with a more controlled cooling loop later. ([Cooling loops](thermo-aquatuner-steam-turbine-cooling-loop.md) are covered later in the guide.)
 
 You can also use liquid from a cool slush geyser or cool salt slush geyser to feed a metal refinery, as they require cooling liquid for each use. If you send in liquid from a cool geyser, the liquid the metal refinery outputs will be pretty close to suitable temperature when it comes out, so you can probably just turn it to water and pump it into your water supply. (How much the metal refinery heats up its cooling liquid depends on what metal you refine.)
 
@@ -103,7 +103,7 @@ The salt water geyser. Output: +95C salt water
 
 In addition to the cool geysers covered earlier, there are different kinds of geysers and vents that output hot(ter) water, or liquids that can be turned into water.
 
-My personal favourite is the polluted water vent. It outputs germy, polluted water at +30C. Its output can be used as-is for Thimble Reed farming or turned into water of a very reasonable temperature - your basic plants like Mealwood and Bristle Blossoms stop growing at above +30C. (Turning germy, polluted water into germ-free water is covered [earlier](https://www.guidesnotincluded.com/recycling-toilet-water) in this guide.)
+My personal favourite is the polluted water vent. It outputs germy, polluted water at +30C. Its output can be used as-is for Thimble Reed farming or turned into water of a very reasonable temperature - your basic plants like Mealwood and Bristle Blossoms stop growing at above +30C. (Turning germy, polluted water into germ-free water is covered [earlier](recycling-toilet-water.md) in this guide.)
 
 The other geysers that can give you water, and their output temperatures, are:
 
@@ -112,17 +112,17 @@ The other geysers that can give you water, and their output temperatures, are:
 * The cool steam vent sounds promising, but the word "cool" refers to steam, so isn't really that cool: +110C
 * The steam vent outputs steam at a whopping +500C
 
-Perhaps the easiest use of these is the water geyser used to feed a [SPOM](https://www.guidesnotincluded.com/to-know-the-spom-is-to-love-the-spom) (which produces oxygen - covered later in this guide).
+Perhaps the easiest use of these is the water geyser used to feed a [SPOM](to-know-the-spom-is-to-love-the-spom.md) (which produces oxygen - covered later in this guide).
 
 If you build your SPOM near the water geyser (or salt water geyser) then you won't risk heating up your base too much by piping hot water around. (And remember to use insulated liquid pipes.)
 
 If you dig out an area around and under your water or salt water geyser, you can line it with insulated tiles and then pump out all the gases to create a vacuum in the liquid storage area. That way you will have minimal temperature transfer from your hot liquid(s) to the surrounding area.
 
-(To create a vacuum you can either wall the area off with a gas pump built in that will create a vacuum and then be left in the room, or you can build a [liquid lock](https://www.guidesnotincluded.com/liquid-lock-basics) to allow for access to deconstruct the pump when you're done.)
+(To create a vacuum you can either wall the area off with a gas pump built in that will create a vacuum and then be left in the room, or you can build a [liquid lock](liquid-lock-basics.md) to allow for access to deconstruct the pump when you're done.)
 
 If you pump hot water to you main water storage then cooling might be necessary.
 
-I tend to avoid filling my water storage with very hot water, but that's easy for me to say as I usually have small bases with few dupes, so I don't need that much water. Regardless, to keep your water storage of a suitable temperature you can run a [cooling loop](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop) through it.
+I tend to avoid filling my water storage with very hot water, but that's easy for me to say as I usually have small bases with few dupes, so I don't need that much water. Regardless, to keep your water storage of a suitable temperature you can run a [cooling loop](thermo-aquatuner-steam-turbine-cooling-loop.md) through it.
 
 Another option for cooling, if you have ice or snow on your map, is to store it in your water storage. (Note: it takes a long time for a storage bin full of ice to melt.) You can also use polluted ice to cool down your water, just remember it will turn to polluted water when it melts.
 
@@ -150,13 +150,13 @@ The cool steam vent. The cool steam vent generates steam that is too cool to pow
 
 There are a few ways you can do this. When looking at the pictures included here, keep in mind that I'm not a min-maxer; I'm satisfied as long as something works. Meaning you can probably find more efficient builds elsewhere.
 
-In both cases, start by creating a vacuum around the vent. Both options use cooling loops for the cooling of the steam. Cooling loops are covered [later in the guide](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop).
+In both cases, start by creating a vacuum around the vent. Both options use cooling loops for the cooling of the steam. Cooling loops are covered [later in the guide](thermo-aquatuner-steam-turbine-cooling-loop.md).
 
 One option, which I don't use myself but I saw the idea in a Francis John YouTube video, is to have a cooling loop that cools a section outside the cool steam vent chamber. Then you use automation to open and close a door between the two areas to regulate temperature transfer between them. (When the door is open that area will be a vacuum, and so no temperature transfer will take place.)
 
 ![ONI-guide_CoolSteamVent2.png](assets/ONI-guide_CoolSteamVent2-253503d2e3.avif)
 
-Use materials with a high thermal conductivity rating for the door and the tiles (walls) on either side of it. E.g. steel for the door and diamond (or metal tiles if you don't have diamond) for the walls. (Temperature transfer basics are covered [elsewhere](https://www.guidesnotincluded.com/heat-transfer-basics) in the guide.)
+Use materials with a high thermal conductivity rating for the door and the tiles (walls) on either side of it. E.g. steel for the door and diamond (or metal tiles if you don't have diamond) for the walls. (Temperature transfer basics are covered [elsewhere](heat-transfer-basics.md) in the guide.)
 
 Another option is to have a cooling loop that runs by the vent, cooling the steam as it comes out.
 
@@ -164,7 +164,7 @@ Note: the liquid in your cooling loop can get very hot, potentially above water'
 
 ![ONI-guide_CoolSteamVent1.png](assets/ONI-guide_CoolSteamVent1-5255514394.avif)
 
-In both of the approaches covered above the radiant liquid pipes would be run through a thermo aquatuner to be cooled. (How that works is covered in the section on [cooling loops](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop).)
+In both of the approaches covered above the radiant liquid pipes would be run through a thermo aquatuner to be cooled. (How that works is covered in the section on [cooling loops](thermo-aquatuner-steam-turbine-cooling-loop.md).)
 
 In either approach, you can then have a liquid pump (made from gold or steel - it needs to be able to handle near-boiling temperatures) hooked up to a hydrosensor to activate it when there is a sufficient amount of water stored. Also, if you have any diamond to spare, a diamond temp shift plate by the cooling loop will help temperature transfer.
 

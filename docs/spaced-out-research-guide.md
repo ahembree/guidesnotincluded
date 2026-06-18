@@ -9,7 +9,7 @@ archive_snapshot: https://web.archive.org/web/20250720063052id_/https://www.guid
 
 ## Introduction
 
-There is a bunch of useful stuff in the research tree that is locked behind the third and fourth kinds of research. (The first two kinds are covered [earlier in this guide](https://www.guidesnotincluded.com/the-very-early-game).)
+There is a bunch of useful stuff in the research tree that is locked behind the third and fourth kinds of research. (The first two kinds are covered [earlier in this guide](the-very-early-game.md).)
 
 For the third kind of research you will need Data Banks, which in turn means you will have to send a dupe (and some plastic) into orbit. (Don't worry - you get the dupe back.) For the fourth kind of research you will need to generate radbolts.
 
@@ -75,7 +75,7 @@ Wheezewort and radbolt generator. More wheezeworts produce more radiation. So st
 
 I use us a design like this. (Note: Oops - the auto-sweeper can't reach the wheezewort on the bottom. So if you use something like this, modify it a bit. Have a second auto-sweeper below and place the phosphorite storage bin so both auto-sweepers can reach it. Or have a way for dupes to fertilize the bottom wheezewort. Or move the auto-sweeper to below the farm tiles.)
 
-Wheezeworts need to be fertilized with phosphorite. You can find it in the hot, purple (aka caustic) biome. Also, Dreckos and [Glossy Dreckos](https://www.guidesnotincluded.com/low-tech-plastic-drecko-ranching) drop phosphorite.
+Wheezeworts need to be fertilized with phosphorite. You can find it in the hot, purple (aka caustic) biome. Also, Dreckos and [Glossy Dreckos](low-tech-plastic-drecko-ranching.md) drop phosphorite.
 
 Wheezeworts produce a lot of radiation. A lot of Wheezeworts produce a lot of a lot of radiation. You can save your dupes a bunch of radiation exposure by setting up a storage bin and an auto-sweeper so the auto-sweeper handles the fertilization. (I need to check this but I think phosphorite is under "agriculture" in the storage bin selection list.)
 
@@ -109,11 +109,11 @@ The data banks you come across won't be anywhere near enough to unlock the entir
 
 The orbital collection lab uses dupe labour and plastic to generate data banks. However, you can only operate orbital collection labs when in space. Blasting off and heading one tile in any direction is enough.
 
-([Getting to space](https://www.guidesnotincluded.com/getting-to-space-dlc) is covered later in the guide.)
+([Getting to space](getting-to-space-dlc.md) is covered later in the guide.)
 
 Use of the orbital collection lab is affected by the machinery skill. But its use is not locked behind any particular skill - any dupe can use it.
 
-To unlock the entire research tree you will need a lot of plastic - upwards of 10K. So give some thought to your plastic production. (Later in this guide we'll cover the low-tech option of [ranching Glossy Dreckos](https://www.guidesnotincluded.com/low-tech-plastic-drecko-ranching) and also [refining petroleum](https://www.guidesnotincluded.com/getting-oil-petroleum-and-plastic).)
+To unlock the entire research tree you will need a lot of plastic - upwards of 10K. So give some thought to your plastic production. (Later in this guide we'll cover the low-tech option of [ranching Glossy Dreckos](low-tech-plastic-drecko-ranching.md) and also [refining petroleum](getting-oil-petroleum-and-plastic.md).)
 
 ---
 

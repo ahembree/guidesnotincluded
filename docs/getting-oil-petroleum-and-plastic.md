@@ -21,7 +21,7 @@ Triage Cot
 
 Some things to keep in mind:
 
-* The oil biome is hot. So use [Atmo Suits](https://www.guidesnotincluded.com/atmo-suit-basics).
+* The oil biome is hot. So use [Atmo Suits](atmo-suit-basics.md).
 
   + In hot surroundings (mid-70C and above) dupes will start taking damage and then become incapacitated, needing saving by another dupe.
 
@@ -34,7 +34,7 @@ There will most likely be pools of oil waiting for you in the oil biome. How muc
 
 When pumping oil out of the oil biome, remember to use Insulated Pipes if you want to minimize temperature exchange with the surrounding area.
 
-If you want to stop gases from mixing between the oil biome and the rest of your base, you can put a [liquid lock](https://www.guidesnotincluded.com/liquid-lock-basics) by the entrance to the oil biome. If you also want to stop temperatures from mixing, you can put two liquid locks next to one another and then use a gas pump to create a vacuum in the space between them.
+If you want to stop gases from mixing between the oil biome and the rest of your base, you can put a [liquid lock](liquid-lock-basics.md) by the entrance to the oil biome. If you also want to stop temperatures from mixing, you can put two liquid locks next to one another and then use a gas pump to create a vacuum in the space between them.
 
 Getting there without Atmo-Suits?
 
@@ -88,7 +88,7 @@ Hydro Sensor
 
 If you build a room for your Oil Well (rather than having it just release oil and natural gas into the oil biome) you will need a Gas Pump to pump out excess natural gas (or the gas pressure will rise so high it will damage your tiles). But you can also use this gas to help absorb heat spikes, so keep the gas pressure in the room high. Use an Atmo Sensor to automate the process. (You can set it to the maximum pressure it allows: 20000g.)
 
-Even with all that, it will be hot around the oil well. Any dupe that comes to release its backpressure will be scalded unless they are wearing an [atmo suit](https://www.guidesnotincluded.com/atmo-suit-basics).
+Even with all that, it will be hot around the oil well. Any dupe that comes to release its backpressure will be scalded unless they are wearing an [atmo suit](atmo-suit-basics.md).
 
 The action of releasing backpressure falls under the duplicant skill Operating. The quicker a dupe releases the pressure, the smaller the risk of pipes taking damage. One possible approach to this is to block entry to the oil well for all but dupes with a decent operating skill. (This can be done by adding a door and modifying door permissions.)
 
@@ -96,7 +96,7 @@ With some simple automation you can have your oil well turn off when you have a 
 
 An easy way to do this is to connect your hydro sensor directly to your oil well (using automation wire). Alternatively, you can use the hydro sensor to regulate your water flow to the oil well. You can hook up the hydro sensor to a liquid shutoff that stops the water flow to the oil well, or connect the hydro sensor directly to your water pump.
 
-A popular oil well setup, by Francis John, is included in the Builds section of this site: [Oil well with liquid lock](https://www.guidesnotincluded.com/oil-well-with-liquid-lock). (An almost identical version is pictured below.)
+A popular oil well setup, by Francis John, is included in the Builds section of this site: [Oil well with liquid lock](oil-well-with-liquid-lock.md). (An almost identical version is pictured below.)
 
 ![ONI-guide-OilWell-2.png](assets/ONI-guide-OilWell-2-61d09e0f7e.png)
 
@@ -148,7 +148,7 @@ Plastic
 
 There are two ways to get plastic: by shearing Glossy Dreckos or by refining petroleum.
 
-My personal preference is using glossy dreckos for my plastic production. I usually have one or two glossy drecko ranches and they produce more than enough plastic for all my needs. This approach to plastic is covered earlier in the guide, [Low-tech plastic: drecko ranching](https://www.guidesnotincluded.com/low-tech-plastic-drecko-ranching).
+My personal preference is using glossy dreckos for my plastic production. I usually have one or two glossy drecko ranches and they produce more than enough plastic for all my needs. This approach to plastic is covered earlier in the guide, [Low-tech plastic: drecko ranching](low-tech-plastic-drecko-ranching.md).
 
 Now let's move on to the other approach: getting plastic by refining petroleum.
 

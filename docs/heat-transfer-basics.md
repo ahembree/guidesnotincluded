@@ -90,7 +90,7 @@ An overflow mechanism (gas bridge) used to send excess hydrogen into the AETN ro
 
 ![ONI-guide-TempTransfer1.png](assets/ONI-guide-TempTransfer1-33dcb3974f.avif)
 
-Metal tiles used as a temperature transfer helper in cooling. A [cooling loop](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop) cools the water in the radiant pipes. The radiant pipes cool the metal tiles. The metal tiles cool the metal volcano output as it is sent along the conveyor rail.
+Metal tiles used as a temperature transfer helper in cooling. A [cooling loop](thermo-aquatuner-steam-turbine-cooling-loop.md) cools the water in the radiant pipes. The radiant pipes cool the metal tiles. The metal tiles cool the metal volcano output as it is sent along the conveyor rail.
 
 The first step in dealing with heat is thinking about when you want insulated, radiant, or normal tiles. When you are comfortable enough with them, the next step is to also think about what material you build those tiles out of.
 

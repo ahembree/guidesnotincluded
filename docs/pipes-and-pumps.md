@@ -19,7 +19,7 @@ A bathroom and SPOM setup is used as an example for how controlling liquid flow 
 
 For liquids as well as for gases there is a large pump and a small (called "mini") pump. All pumps are unlocked through research.
 
-The large pumps are built with metal ore, making them easy to build early on. The small pumps require [plastic](https://www.guidesnotincluded.com/getting-oil-petroleum-and-plastic).
+The large pumps are built with metal ore, making them easy to build early on. The small pumps require [plastic](getting-oil-petroleum-and-plastic.md).
 
 Pumps, even liquid pumps, do not need to be built on a foundation. Meaning you can build a liquid pump in the middle of a body of liquid and it will still work.
 
@@ -104,7 +104,7 @@ Min-maxing gas storage. The gas storage room is full of gas, and there are a bun
 
 If you build one of these, remember to also put a separate gas pump in the gas storage room, to pump gas to wherever you need it.
 
-(You can add automation to make sure the pumps only kick in if there is enough gas - as covered in the section on [automation](https://www.guidesnotincluded.com/getting-started-with-automation).)
+(You can add automation to make sure the pumps only kick in if there is enough gas - as covered in the section on [automation](getting-started-with-automation.md).)
 
 As a final note: this approach slightly bends the laws of physics. If you don't mind breaking those laws entirely, you can also set up an infinite gas (or liquid) storage area. I don't use that mechanic myself, but you can find guides for it online. Search for infinite gas storage or infinite liquid storage.
 
@@ -142,17 +142,17 @@ Some of the more common liquids and how much is required to fill a tile:
 
 Note: The liquid vent will stop working at 1000kg of pressure, regardless of what kind of liquid is being pumped. But: not all liquids will necessarily reach that amount of pressure. For instance petroleum and crude oil won't block a liquid vent even when a tile is completely immersed.
 
-(To stop such a vent you can use [automation](https://www.guidesnotincluded.com/getting-started-with-automation), e.g. by connecting a hydro sensor to the vent to close it when a tile is filled.)
+(To stop such a vent you can use [automation](getting-started-with-automation.md), e.g. by connecting a hydro sensor to the vent to close it when a tile is filled.)
 
 A tile can contain more liquid than is listed in the bullet points above if there is pressure on the tile. One such example is your water storage area. Mouse over the tiles in the upper and lower sections of it and you will probably notice a difference in water volume per tile.
 
 Liquid vents, like gas geysers, can over-pressurize and stop emitting liquid. I haven't done any testing on it, but this generally seems to happen when a vent is in three tiles of liquid (above its neutronium base) and the third tile is at 500kg per tile.
 
-Leaky oil fissures will over-pressurize and stop emitting oil, but oil reservoirs (if I recall correctly) will not. They can keep producing oil even when completely submerged. (But they aren't a geyser, so they need water and power - and occasional depressurizing - to work. See the section on [Getting oil, petroleum and plastic](https://www.guidesnotincluded.com/getting-oil-petroleum-and-plastic) for more on oil wells.)
+Leaky oil fissures will over-pressurize and stop emitting oil, but oil reservoirs (if I recall correctly) will not. They can keep producing oil even when completely submerged. (But they aren't a geyser, so they need water and power - and occasional depressurizing - to work. See the section on [Getting oil, petroleum and plastic](getting-oil-petroleum-and-plastic.md) for more on oil wells.)
 
 ## Liquid and gas piping basics: inputs and outputs
 
-[I'll add this section soonish, but for now you can find the basics covered in: [The early game](https://www.guidesnotincluded.com/the-early-game).]
+[I'll add this section soonish, but for now you can find the basics covered in: [The early game](the-early-game.md).]
 
 ## Controlling packet flow
 
@@ -255,17 +255,17 @@ I'll conclude with an example of how liquid bridges can be used in combining var
 
 Prioritizing flow. Excess water from a bathroom water decontamination setup is sent to a SPOM. (The piping here isn't complete - check the last picture for the final version.)
 
-In the pictures above, there is a polluted water decontamination setup in the middle. (How that setup works, and how to build one, is covered elsewhere in the guide: see [Recycling bathroom water](https://www.guidesnotincluded.com/recycling-toilet-water).)
+In the pictures above, there is a polluted water decontamination setup in the middle. (How that setup works, and how to build one, is covered elsewhere in the guide: see [Recycling bathroom water](recycling-toilet-water.md).)
 
 Newly decontaminated water is first sent back into the bathroom loop. This is done using a liquid bridge - seen on the far right in the middle of the picture - that tells the water to go down if there is space in the pipes below.
 
 Since bathrooms produce more liquid than they use, the bathroom and decontamination setup will produce excess water. When the pipe going down from the liquid bridge is full, any excess water will be sent up to the SPOM.
 
-(A SPOM is a setup that produces oxygen. It is covered later in the guide: see [Oxygen: to know the SPOM is to love the SPOM](https://www.guidesnotincluded.com/to-know-the-spom-is-to-love-the-spom).)
+(A SPOM is a setup that produces oxygen. It is covered later in the guide: see [Oxygen: to know the SPOM is to love the SPOM](to-know-the-spom-is-to-love-the-spom.md).)
 
 We aren't quite done yet. With a setup like the one pictured above, the SPOM would only get water sporadically, whenever there was excess from the bathroom.
 
-We want to add a way to make sure the SPOM always gets water. We can do this by adding a pipe from another water source. (If you're running low on water, see [Getting (more) water](https://www.guidesnotincluded.com/getting-more-water).)
+We want to add a way to make sure the SPOM always gets water. We can do this by adding a pipe from another water source. (If you're running low on water, see [Getting (more) water](getting-more-water.md).)
 
 ![ONI_Guide_PrioritizingFlow2.png](assets/ONI_Guide_PrioritizingFlow2-c9ea6cfdf3.avif)
 

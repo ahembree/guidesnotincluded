@@ -152,7 +152,7 @@ Note: Salt water is slightly risky to use. You can fit more salt water than wate
 
 It's important to make sure there are no air or other gas pockets in your water tank as that can mess with your steam turbine by blocking input pipes from being able to take in steam.
 
-The thermo aquatuner needs to be able to withstand getting very hot. Which means you'll want to build it out of [steel](https://www.guidesnotincluded.com/getting-steel) (or better).
+The thermo aquatuner needs to be able to withstand getting very hot. Which means you'll want to build it out of [steel](getting-steel.md) (or better).
 
 As far as what liquid to use in the cooling loop, there are many choices. Which to choose depends on your needs, but if you just want to do a standard cooling loop that you will keep in a normal temperature range then you can use most any liquid, water or polluted water are common choices.
 

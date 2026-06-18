@@ -33,7 +33,7 @@ Source: "Electrolyzer, SPOM, O2, Oxygen: Tutorial nuggets : Oxygen not included"
 
 For an introduction to how SPOMs work, see:
 
-[Oxygen: To know the SPOM is to love the SPOM](https://www.guidesnotincluded.com/to-know-the-spom-is-to-love-the-spom)
+[Oxygen: To know the SPOM is to love the SPOM](to-know-the-spom-is-to-love-the-spom.md)
 
 Oops - I forgot the automation wire from the upper gas pump to the atmo sensor on its right.
 

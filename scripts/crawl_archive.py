@@ -300,6 +300,34 @@ def unwrap_self_links(soup, page_url: str) -> None:
             a.unwrap()
 
 
+def rewrite_internal_links(soup, current_relpath: str, url_map: dict[str, str]) -> None:
+    """Repoint links that target other archived pages at their local Markdown
+    files, using paths relative to the current page.
+
+    Keeps navigation inside this documentation instead of the dead original
+    domain. External links (YouTube, Reddit, Steam, …) and any in-site link
+    whose target was not restored are left untouched. Provenance links live in
+    the front matter / footer, which are added after this runs, so they keep
+    pointing at the original site and the Wayback snapshot.
+    """
+    here_dir = os.path.dirname(current_relpath) or "."
+    for a in soup.find_all("a"):
+        href = a.get("href")
+        if not href:
+            continue
+        m = re.match(r"^https?://web\.archive\.org/web/\d+(?:[a-z]{2}_)?/(.*)$", href)
+        if m:
+            href = m.group(1)
+        if not href.startswith("http"):
+            continue
+        base, sep, frag = href.partition("#")
+        target = url_map.get(normalize_key(base))
+        if not target:
+            continue
+        rel = os.path.relpath(target, here_dir)
+        a["href"] = rel + (sep + frag if frag else "")
+
+
 def extract_main_html(html: str) -> str:
     """Best-effort extraction of the primary content region.
 
@@ -518,6 +546,7 @@ def convert_capture(
     docs_dir: Path,
     download_imgs: bool,
     stats: CrawlStats,
+    url_map: dict[str, str] | None = None,
 ) -> str:
     r = http_get(s, cap.raw_url)
     html = r.text
@@ -528,6 +557,8 @@ def convert_capture(
     main_html = extract_main_html(html)
     main_soup = BeautifulSoup(main_html, "lxml")
     unwrap_self_links(main_soup, cap.original)
+    if url_map:
+        rewrite_internal_links(main_soup, rel_md_path, url_map)
 
     if download_imgs:
         download_assets(s, main_soup, cap.original, cap.timestamp, docs_dir, rel_md_path, stats)
@@ -632,7 +663,7 @@ def main(argv: list[str] | None = None) -> int:
         out_path = docs_dir / rel
         log(f"[{i}/{len(captures)}] {cap.original} -> {out_path}")
         try:
-            content = convert_capture(s, cap, rel, docs_dir, not args.no_assets, stats)
+            content = convert_capture(s, cap, rel, docs_dir, not args.no_assets, stats, rel_paths)
             write_file(out_path, content)
             stats.pages += 1
         except Exception as exc:  # noqa: BLE001

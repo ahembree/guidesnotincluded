@@ -27,7 +27,7 @@ Where the standard challenge with Oxygen Not Included is that things get too hot
 
 The coldest it can get is -173 C, which is about 200 C colder than I like to keep my base. So harnessing an AETN is largely about building a system that only lets out a reasonable amount of chill.
 
-Controlling AETN chill commonly involves some automation. If you haven't done any automating yet, don't worry - it's not hard. You'll just be connecting a door to a sensor. (There's also a separate guide on [Getting started with automation](https://www.guidesnotincluded.com/getting-started-with-automation) if you want to dive deeper.)
+Controlling AETN chill commonly involves some automation. If you haven't done any automating yet, don't worry - it's not hard. You'll just be connecting a door to a sensor. (There's also a separate guide on [Getting started with automation](getting-started-with-automation.md) if you want to dive deeper.)
 
 As with everything else in Oxygen Not Included, there are many ways you can do things. I tend to use two designs, one version for cooling either SPOM oxygen output or the liquid in a cooling loop. The second version for cooling sleet wheat farms. (But you can of course use the same designs to cool whatever.)
 
@@ -61,7 +61,7 @@ Creating a vacuum.
 
 How effective this design is at allowing temperature transfer between the two sides of the door will depend on what materials you build things out of.
 
-The goal should be to get access to steel before you build this. (There is a separate guide for [getting steel](https://www.guidesnotincluded.com/getting-steel).) The reason for that is that doors made out of the metals you have access to at the start of the game have very bad thermal conductivity.
+The goal should be to get access to steel before you build this. (There is a separate guide for [getting steel](getting-steel.md).) The reason for that is that doors made out of the metals you have access to at the start of the game have very bad thermal conductivity.
 
 The difference between materials is significant. Here are the thermal conductivity stats for a mechanized airlock depending on what it is made of:
 
@@ -101,7 +101,7 @@ Thermal conductivity of common gases:
 
 You don't need to remember these figures, just keep in mind that hydrogen is the best option for the AETN and use it if you can be bothered.
 
-Filling the AETN room with hydrogen is quite simple to do when you get the hang of it. You start by building the AETN room but leaving a way in on one side. Then you build a temporary [liquid lock](https://www.guidesnotincluded.com/liquid-lock-basics) leading to that entrance. Then vacuum out the gases in the AETN room. Build a gas vent inside the AETN room, hooked up to the hydrogen piping. When the room is in a vacuum, build the missing section of the wall.
+Filling the AETN room with hydrogen is quite simple to do when you get the hang of it. You start by building the AETN room but leaving a way in on one side. Then you build a temporary [liquid lock](liquid-lock-basics.md) leading to that entrance. Then vacuum out the gases in the AETN room. Build a gas vent inside the AETN room, hooked up to the hydrogen piping. When the room is in a vacuum, build the missing section of the wall.
 
 A way to improve temperature transfer is to add some tempshift plates. They are unlocked in Refined Renovations in the Solid Material branch of the research tree.
 

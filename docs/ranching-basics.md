@@ -259,7 +259,7 @@ That was the good news. The bad news is that the incubator is a power-hungry lit
 
 What this means is that you can save a lot of power by just turning the incubator on long enough to have a dupe lullaby it, and then turn off the incubator again. The buff lasts for a cycle, after which you again turn on the incubator long enough for a dupe to sing to it again.
 
-You can use some simple automation to turn incubators on and off. For instance by building a Signal Switch (found under Automation) and using automation wire to connect it to the incubator's automation port. Then you can simply flip the switch to turn the incubator on and off. Automation is covered [later in the guide](https://www.guidesnotincluded.com/getting-started-with-automation).
+You can use some simple automation to turn incubators on and off. For instance by building a Signal Switch (found under Automation) and using automation wire to connect it to the incubator's automation port. Then you can simply flip the switch to turn the incubator on and off. Automation is covered [later in the guide](getting-started-with-automation.md).
 
 Or, if automation seems intimidating, you can just use the Disconnect tool (bottom right, looks like a pair of scissors) to disconnect the incubator's power wire, then reconnect it when you want to power it again.
 
@@ -370,7 +370,7 @@ There are two kinds of dreckos: standard dreckos (which are white) and glossy dr
 
 Both kinds of drecko are useful. Dreckos drop reed fiber when sheared, glossy dreckos drop plastic.
 
-Morphing dreckos into glossy dreckos is done by feeding them mealwood. This topic, including pictures of a basic ranch for morphing dreckos into glossy dreckos, is covered [later in the quide](https://www.guidesnotincluded.com/low-tech-plastic-drecko-ranching).
+Morphing dreckos into glossy dreckos is done by feeding them mealwood. This topic, including pictures of a basic ranch for morphing dreckos into glossy dreckos, is covered [later in the quide](low-tech-plastic-drecko-ranching.md).
 
 Drecko ex.
 
@@ -392,9 +392,9 @@ By building a drecko ranch using balm lily as food, you can create an infinite s
 
 Dreckos need hydrogen for their scales to regrow after being sheared. So if you build such a ranch, it's a good idea to have hydrogen above (for scale regrowth) and chlorine below (for the balm lilies to grow).
 
-It is also a good idea to have anyone entering the ranch wear a kind of protective clothing called an atmo suit. That way they will be able to breathe even when surrounded by chlorine. Also, the carbon dioxide dupes exhale would mess with the chlorine. With an atmo suit, that carbon dioxide is stored in the suit and then dumped outside the ranch. ([Atmo suit basics](https://www.guidesnotincluded.com/atmo-suit-basics) are covered later in the guide.)
+It is also a good idea to have anyone entering the ranch wear a kind of protective clothing called an atmo suit. That way they will be able to breathe even when surrounded by chlorine. Also, the carbon dioxide dupes exhale would mess with the chlorine. With an atmo suit, that carbon dioxide is stored in the suit and then dumped outside the ranch. ([Atmo suit basics](atmo-suit-basics.md) are covered later in the guide.)
 
-I use transport tubes for my balm lily drecko ranches. They can be quite heavy power users. Another option would be to use [liquid locks](https://www.guidesnotincluded.com/liquid-lock-basics) by the ranch entrances. (And a door to keep the dreckos in.)
+I use transport tubes for my balm lily drecko ranches. They can be quite heavy power users. Another option would be to use [liquid locks](liquid-lock-basics.md) by the ranch entrances. (And a door to keep the dreckos in.)
 
 ![Dreckoranch2.png](assets/Dreckoranch2-deb16cc4e0.png)
 

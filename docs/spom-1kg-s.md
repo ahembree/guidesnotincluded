@@ -29,7 +29,7 @@ Source: "Electrolyzer, SPOM, O2, Oxygen: Tutorial nuggets : Oxygen not included"
 
 For an introduction to how the SPOM works, see:
 
-[Oxygen: To know the SPOM is to love the SPOM](https://www.guidesnotincluded.com/to-know-the-spom-is-to-love-the-spom)
+[Oxygen: To know the SPOM is to love the SPOM](to-know-the-spom-is-to-love-the-spom.md)
 
 ![ONI_SPOM_small__automation.png](assets/ONI_SPOM_small__automation-ba376db6af.avif)
 

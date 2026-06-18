@@ -48,7 +48,7 @@ More dupes in-game
 
 Every third in-game day you will get the option to add a new dupe to your colony. Surprisingly quickly you can even add more dupes than your colony can support - a fairly common "Ooops" for new players.
 
-Add dupes sparingly while still learning the ropes: every new dupe is another mouth to feed and more oxygen consumed. (I have more on this topic in a later section: [How many dupes "should" you have?](https://www.guidesnotincluded.com/how-many-dupes-should-you-have))
+Add dupes sparingly while still learning the ropes: every new dupe is another mouth to feed and more oxygen consumed. (I have more on this topic in a later section: [How many dupes "should" you have?](how-many-dupes-should-you-have.md))
 
 ## Skill points, stress and morale requirements
 

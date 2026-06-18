@@ -21,7 +21,7 @@ Use steel (or better conducting material) for the door
 
 Note: powering the door is optional. This design has an overflow gas piping that feeds the anti entropy thermo-nullifier first and only fills the room when there is extra hydrogen.
 
-If you want to read a bit about how it all works, and see an option for a variation on this design, see: [Anti entropy thermo-nullifier cooling](https://www.guidesnotincluded.com/anti-entropy-thermo-nullifier-cooling).
+If you want to read a bit about how it all works, and see an option for a variation on this design, see: [Anti entropy thermo-nullifier cooling](anti-entropy-thermo-nullifier-cooling.md).
 
 Design by Francis John
 

@@ -97,7 +97,7 @@ The Spacefarer Module is unlocked through research. It is found in Durable Life 
 
 The solo spacefarer nosecone is very small, so I recommend you make unlocking the larger spacefarer module a priority. (The small one is so small that I no longer bother with it - I unlock the larger module before building my first rocket.)
 
-Unlocking the Spacefarer Module requires doing a bit of the kind of research that requires radbolts. (But don't be intimidated by this - there is [a separate guide](https://www.guidesnotincluded.com/spaced-out-research-guide) for how to do radbolt research.)
+Unlocking the Spacefarer Module requires doing a bit of the kind of research that requires radbolts. (But don't be intimidated by this - there is [a separate guide](spaced-out-research-guide.md) for how to do radbolt research.)
 
 The height restrictions for the early engines are so limiting that there won't be a lot of space for extra modules on your first rocket. One option is to have some solar panel modules to help with power generation. (Or a battery to store power.)
 

@@ -57,7 +57,7 @@ There are many variations of "use chlorine to kill germs" -builds. I learned the
 
 Available at: <https://youtu.be/SEL3pxB5tao?t=102>, accessed 11 August, 2020.
 
-(Note: I just rewrote this whole section. [In late March, 2023] There might be an unusual amount of typos, but I'll try to find them. If you find some typos or other wonkiness, please let me know. There's an anonymous [contact form](https://www.guidesnotincluded.com/guide-feedback) you can use.)
+(Note: I just rewrote this whole section. [In late March, 2023] There might be an unusual amount of typos, but I'll try to find them. If you find some typos or other wonkiness, please let me know. There's an anonymous [contact form](guide-feedback.md) you can use.)
 
 ## Some basics (or, We can do this the easy way or the hard way)
 
@@ -247,7 +247,7 @@ We want a room full of chlorine. If our room were to have a lot of chlorine but 
 
 To make sure we only have chlorine, we will have to build a room and then empty it of all gases - create a vacuum. But we also want to be able to access the room once it's a vacuum. To accomplish this, we will need something called a liquid lock.
 
-A liquid lock lets dupes pass through, but not gases. Then we pump out all the gases in the room and finally we fill the room with chlorine. (There's a separate section of the guide on this topic if you want more: [Liquid lock basics](https://www.guidesnotincluded.com/liquid-lock-basics).)
+A liquid lock lets dupes pass through, but not gases. Then we pump out all the gases in the room and finally we fill the room with chlorine. (There's a separate section of the guide on this topic if you want more: [Liquid lock basics](liquid-lock-basics.md).)
 
 You can build either a proper liquid lock or a half-assed, quicker-but-riskier versions. Since this is a temporary liquid lock, I build the quicker version.
 

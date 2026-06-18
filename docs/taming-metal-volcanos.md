@@ -13,7 +13,7 @@ Tapping into metal volcanos for their resources can be done in many different wa
 
 This guide is for a fairly basic approach that is easy to build, uses very little automation and will work for any metal volcanos you find on your starting asteroid.
 
-However, this design does require [steel](https://www.guidesnotincluded.com/getting-steel) and [plastic](https://www.guidesnotincluded.com/getting-oil-petroleum-and-plastic) for a [cooling loop](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop). And also a fair bit of power, depending on how much you want to cool down the volcano output.
+However, this design does require [steel](getting-steel.md) and [plastic](getting-oil-petroleum-and-plastic.md) for a [cooling loop](thermo-aquatuner-steam-turbine-cooling-loop.md). And also a fair bit of power, depending on how much you want to cool down the volcano output.
 
 ![ONI-MetalVolcano1.png](assets/ONI-MetalVolcano1-c84845b889.avif)
 
@@ -74,7 +74,7 @@ Digging out the key tile when you know a volcano has just gone dormant is safe. 
 
 Note: you can do a fair bit of the building without uncovering the key tile and activating the volcano.
 
-When building the steam room - the room with the volcano, don't enclose it completely. Add a (temporary) [liquid lock](https://www.guidesnotincluded.com/liquid-lock-basics) leading in to the steam chamber. This will be necessary to create a vacuum in the room.
+When building the steam room - the room with the volcano, don't enclose it completely. Add a (temporary) [liquid lock](liquid-lock-basics.md) leading in to the steam chamber. This will be necessary to create a vacuum in the room.
 
 There are various things that need doing in the volcano/steam room. Try to forget as few of them as possible:
 

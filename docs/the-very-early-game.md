@@ -35,7 +35,7 @@ Advanced research; the Super Computer
 
 ## Choosing dupes
 
-There's a separate guide, [Choosing Duplicants](https://www.guidesnotincluded.com/choosing-duplicants), that covers some basics about dupe selection.
+There's a separate guide, [Choosing Duplicants](choosing-duplicants.md), that covers some basics about dupe selection.
 
 In a nutshell: choose dupes that are good at the things you will be doing. You can pick a category for a dupe to be skilled in by clicking on the icon to the left of the "reroll" button. You can reroll as often as you want.
 
@@ -161,7 +161,7 @@ If you didn't quite manage to avert disaster, you will have yellow puddles start
 
 If any of the accident got into your clean water supply, germs will spread in your clean water. The easiest solution for now is to abandon that body of water and dig your way to a new, germ-free water source (\*cough\* or reload the game \*cough\*).
 
-It is entirely possible to decontaminate germy water (in fact, we'll cover it [later in this guide](https://www.guidesnotincluded.com/recycling-toilet-water)), but that's more of a mid-game thing.
+It is entirely possible to decontaminate germy water (in fact, we'll cover it [later in this guide](recycling-toilet-water.md)), but that's more of a mid-game thing.
 
 * For more on germs, see "Tip: germ basics"
 * You can use priorities to force certain things to be done first, like building bathrooms. For more, see the tip on priorities.
@@ -582,7 +582,7 @@ Compost. Tucked away behind wash basins.
 
 ## Tip: research basics (Spaced Out DLC)
 
-* For the other two kinds of research, see [Spaced Out research: Radbolts, data banks and you](https://www.guidesnotincluded.com/spaced-out-research-guide)
+* For the other two kinds of research, see [Spaced Out research: Radbolts, data banks and you](spaced-out-research-guide.md)
 
 Advanced research
 

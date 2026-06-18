@@ -31,7 +31,7 @@ On the positive side, with this approach you can have solar power up and running
 
 The second approach is one older players will be familiar with from the base game: Francis John's C-miner design. This is where you cover the top of your base (or your map) with bunker doors that the meteors impact on. When the meteor shower is over you open the bunker doors, let the debris fall, and use robo-miners to dig it all out.
 
-This approach will let you gather up all the materials in the meteors. (Note that they can be very hot - over 200 C.) This approach requires a lot of [steel](https://www.guidesnotincluded.com/getting-steel) and also a fair bit of power when the bunker doors open or close (depending on how much of the map you cover them in).
+This approach will let you gather up all the materials in the meteors. (Note that they can be very hot - over 200 C.) This approach requires a lot of [steel](getting-steel.md) and also a fair bit of power when the bunker doors open or close (depending on how much of the map you cover them in).
 
 Both designs use space scanners and both designs require cooling. So let's look at that first. Then a quick look at a way to get a notification, and even automatically pause the game, when meteor showers are appproaching. Just in case you want to see how your defences hold up. Finally, after all that, we'll get to the designs.
 
@@ -71,7 +71,7 @@ Conduction panel basics:
 * Can be placed on buildings and run through floor and wall tiles
 * Transfers heat regardless of whether there is liquid running through (but the liquid is used to cool it)
 
-So to cool something in the vacuum of space, run a cooling loop past it with a conduction panel where you want the cooling to take place. (Two cooling loop options are covered earlier in the guide: [AETN cooling](https://www.guidesnotincluded.com/anti-entropy-thermo-nullifier-cooling) or a [thermo aquatuner steam turbine setup](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop).)
+So to cool something in the vacuum of space, run a cooling loop past it with a conduction panel where you want the cooling to take place. (Two cooling loop options are covered earlier in the guide: [AETN cooling](anti-entropy-thermo-nullifier-cooling.md) or a [thermo aquatuner steam turbine setup](thermo-aquatuner-steam-turbine-cooling-loop.md).)
 
 ![ONI-Guide-MeteorBlasterCoolingLoop.png](assets/ONI-Guide-MeteorBlasterCoolingLoop-89f1ba5089.avif)
 
@@ -181,11 +181,11 @@ Blastshot maker basics:
 
 It produces five blastshot per order, which requires 25 kg of refined metal and 50 kg of petroleum.
 
-You can get refined metal by refining ore in a rock crusher or metal refinery. But a more sustainable solution is to use a metal that you have a volcano that produces. (There are separate guides on [how to get petroleum](https://www.guidesnotincluded.com/getting-oil-petroleum-and-plastic) and [how to tame a metal volcano](https://www.guidesnotincluded.com/taming-metal-volcanos).)
+You can get refined metal by refining ore in a rock crusher or metal refinery. But a more sustainable solution is to use a metal that you have a volcano that produces. (There are separate guides on [how to get petroleum](getting-oil-petroleum-and-plastic.md) and [how to tame a metal volcano](taming-metal-volcanos.md).)
 
 At the time of writing there is still some small bugginess with the blastshot maker. Dupes can fill the petroleum from a pitcher pump in petroleum. But the blastshot maker will only work if you have a section of pipe built (or even scheduled to be built) on the liquid input port. (I have submitted a bug report about this as well.)
 
-You can use automation to make sure your meteor blasters are kept full and you have some blastshot in reserve. There is a seprate guide covering [automation basics](https://www.guidesnotincluded.com/getting-started-with-automation), but below are some overlays of one way to do it.
+You can use automation to make sure your meteor blasters are kept full and you have some blastshot in reserve. There is a seprate guide covering [automation basics](getting-started-with-automation.md), but below are some overlays of one way to do it.
 
 A smart storage bin keeps some blastshot in reserve. Whenever it is less than full, it sends a signal to turn on the blastshot maker until it is filled up again. A conveyor loader, set to a higher priority than the smart storage bin, sends blastshot to the meteor blasters.
 

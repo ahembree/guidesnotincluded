@@ -9,19 +9,19 @@ archive_snapshot: https://web.archive.org/web/20250806075600id_/https://www.guid
 
 Contents:
 
-* [A Great Hall (dining room)](https://www.guidesnotincluded.com/the-early-game)
-* [Plumbing - toilets and sinks](https://www.guidesnotincluded.com/the-early-game)
-* [Toilets and sinks, part 2: swapping your polluted water for reed fiber](https://www.guidesnotincluded.com/the-early-game)
-* [Dealing with polluted water bottles](https://www.guidesnotincluded.com/the-early-game)
+* [A Great Hall (dining room)](the-early-game.md)
+* [Plumbing - toilets and sinks](the-early-game.md)
+* [Toilets and sinks, part 2: swapping your polluted water for reed fiber](the-early-game.md)
+* [Dealing with polluted water bottles](the-early-game.md)
 
-* [Dealing with polluted oxygen](https://www.guidesnotincluded.com/the-early-game)
-* [Power, part 2: the coal generator and power transformer](https://www.guidesnotincluded.com/the-early-game)
-* [Dealing with carbon dioxide](https://www.guidesnotincluded.com/the-early-game)
-* [Optional: Upgrading to Bristle Blossoms](https://www.guidesnotincluded.com/the-early-game)
+* [Dealing with polluted oxygen](the-early-game.md)
+* [Power, part 2: the coal generator and power transformer](the-early-game.md)
+* [Dealing with carbon dioxide](the-early-game.md)
+* [Optional: Upgrading to Bristle Blossoms](the-early-game.md)
 
 ## Introduction
 
-This guide starts off where the previous section, [The very early game](https://www.guidesnotincluded.com/the-very-early-game), left off.
+This guide starts off where the previous section, [The very early game](the-very-early-game.md), left off.
 
 I won't go over the stuff from that part here. Instead I'll just pop in a screenshot to show what has been done by the start of this guide.
 
@@ -149,7 +149,7 @@ Inputs and outputs. When the plumbing overlay is active you will see a reminder 
 
 Emptying outhouses and wash basins takes time - and produces polluted dirt and germy water. Toilets and sinks require no maintenance, so it's a useful upgrade.
 
-There's a separate part of the guide, [Pipes and pumps: liquid and gas flow basics](https://www.guidesnotincluded.com/pipes-and-pumps), that goes more in-depth into pumps and pipes and such. But for what we will be building now we'll just need to remember some basics.
+There's a separate part of the guide, [Pipes and pumps: liquid and gas flow basics](pipes-and-pumps.md), that goes more in-depth into pumps and pipes and such. But for what we will be building now we'll just need to remember some basics.
 
 * Plumbing-related buildings can have inputs and outputs. Some have both, some have only one or the other.
 * Inputs are white
@@ -260,9 +260,9 @@ Hydroponic Farm
 
 You now have a steadily increasing supply of polluted water. There are different options for what to do with it. Here we'll cover a simple solution: exchange your polluted water for reed fiber.
 
-(You can also skip this step and go straight to a [chlorine-based decontamination build](https://www.guidesnotincluded.com/recycling-toilet-water). But if you're a beginner I'd say don't worry about that stuff yet - there's plenty of time to learn how that works later.)
+(You can also skip this step and go straight to a [chlorine-based decontamination build](recycling-toilet-water.md). But if you're a beginner I'd say don't worry about that stuff yet - there's plenty of time to learn how that works later.)
 
-Reed fiber is used for various things, like for making a kind of protective clothing called an [atmo suit](https://www.guidesnotincluded.com/atmo-suit-basics). You'll be wanting some atmo suits at some point, so having a supply of reed fiber is a good thing.
+Reed fiber is used for various things, like for making a kind of protective clothing called an [atmo suit](atmo-suit-basics.md). You'll be wanting some atmo suits at some point, so having a supply of reed fiber is a good thing.
 
 Reed fiber is harvested from a plant called thimble reed. Thimble reed consumes polluted water to grow, meaning you can feed it all of your polluted water and then get reed fiber in return.
 
@@ -288,7 +288,7 @@ The slime biome has tiles that are infested with slimelung germs. Before you go 
 
 If you accidentally dig up some slimelung it isn't a big deal. Slimelung germs die slowly in oxygen or quickly in hot or cold areas. So for instance putting the slime in a storage bin in an ice biome will kill off the germs.
 
-* There is a separate guide about [dealing with slimelung](https://www.guidesnotincluded.com/dealing-with-slimelung).
+* There is a separate guide about [dealing with slimelung](dealing-with-slimelung.md).
 
 ![ONI-Guide_ReedFiber2.png](assets/ONI-Guide_ReedFiber2-e614f45f81.avif)
 
@@ -314,7 +314,7 @@ The long-term plan
 
 The final phase for dealing with toilet water is to build a chlorine-based decontamination setup that cleans the polluted water from bathrooms and showers and feeds the water back to into the loop.
 
-As long as you aren't running low on water, some reed fiber production is a good thing. If you are low on water, you can skip ahead to the part of the guide where I cover the decontamination build: [Recycling Toilet Water](https://www.guidesnotincluded.com/recycling-toilet-water). (There's also a section on [Getting (more) water](https://www.guidesnotincluded.com/getting-more-water).)
+As long as you aren't running low on water, some reed fiber production is a good thing. If you are low on water, you can skip ahead to the part of the guide where I cover the decontamination build: [Recycling Toilet Water](recycling-toilet-water.md). (There's also a section on [Getting (more) water](getting-more-water.md).)
 
 * Ladders are fine and all, but is dupe life even worth living without Fire Poles? (Rhetorical question - of course not!)
 
@@ -546,7 +546,7 @@ When choosing a location for your coal power plant, keep in mind that it generat
 
 Since your coal generator will need coal, you can put a storage bin nearby and set it to only accept Coal (found under Consumable Ore).
 
-Without automation your coal generator will run day and night, even when your battery is full. This isn't a big deal over short periods of time, but sooner or later you should get around to automating it. (Again, don't be intimidated - it sounds more difficult than it is. And there's a separate guide, [Getting started with automation](https://www.guidesnotincluded.com/getting-started-with-automation), in which I walk you through it.)
+Without automation your coal generator will run day and night, even when your battery is full. This isn't a big deal over short periods of time, but sooner or later you should get around to automating it. (Again, don't be intimidated - it sounds more difficult than it is. And there's a separate guide, [Getting started with automation](getting-started-with-automation.md), in which I walk you through it.)
 
 Oh, and with this new source of easy power, if you haven't yet built a Refrigerator this might be the time. (Unlocked through Agriculture in the Food research branch.)
 
@@ -768,7 +768,7 @@ You may have noticed a lot of activity around your Mealwood. That is because Mea
 
 You don't need to worry about your dirt levels for a very long time, but If you continue with Mealwood as your only food source you will eventually run out of dirt.
 
-One option is to switch to Bristle Blossoms, which only require water. Though then you will instead need to keep an eye on your water supply, and will eventually need to tap into a geyser to fill up your water supply. (See [Getting (more) water](https://www.guidesnotincluded.com/getting-more-water) for an introduction to water geysers.)
+One option is to switch to Bristle Blossoms, which only require water. Though then you will instead need to keep an eye on your water supply, and will eventually need to tap into a geyser to fill up your water supply. (See [Getting (more) water](getting-more-water.md) for an introduction to water geysers.)
 
 * Bristle Blossoms need light and water to grow
 * They will not grow in temperatures above +30 C
@@ -798,7 +798,7 @@ Bristle Blossoms produce Bristle Berries. Dupes can eat them as such and they ca
 
 If you have access to Sleet Wheat then, combined with Bristle Berry, you can make Berry Sludge. Berry Sludge is a good meal, but the really amazing thing about it is that it cannot spoil. This makes it an excellent source of food for rocket journeys (in the DLC).
 
-Another option for upgrading to something better than Mealwood is critter ranching. Critters drop meat when they die, which can be turned into barbecue. Critters aren't as fussy about heat as plants are, and they don't require water. There is a separate guide if you want to learn about [critter ranching](https://www.guidesnotincluded.com/ranching-basics).
+Another option for upgrading to something better than Mealwood is critter ranching. Critters drop meat when they die, which can be turned into barbecue. Critters aren't as fussy about heat as plants are, and they don't require water. There is a separate guide if you want to learn about [critter ranching](ranching-basics.md).
 
 ---
 

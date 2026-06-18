@@ -19,7 +19,7 @@ The floors are 18 tiles across. This is just so it will fit with my base, which 
 
 The machine on the bottom right is a Molecular Forge. It is a late-game machine as it requires materials that aren't available on your starting asteroid. Some molecular forge recipes also require petroleum, which is why there is a petroleum source by it. The petroleum tank doubles as a cooling liquid for glass.
 
-If you have a [Glossy Drecko ranch](https://www.guidesnotincluded.com/low-tech-plastic-drecko-ranching) you don't need the Polymer Press (the white machine on the right). Then you could add an Exosuit Forge or some other necessary machine there. (I have stopped using the polymer press entirely and always get my plastic from glossy drecko farming. Try it if you haven't already.)
+If you have a [Glossy Drecko ranch](low-tech-plastic-drecko-ranching.md) you don't need the Polymer Press (the white machine on the right). Then you could add an Exosuit Forge or some other necessary machine there. (I have stopped using the polymer press entirely and always get my plastic from glossy drecko farming. Try it if you haven't already.)
 
 The cooling loop isn't included in the above picture, as it would make it (even more) confusing. I'll cover the cooling loop separately.
 
@@ -45,7 +45,7 @@ I like putting a liquid reservoir in my cooling loops, and then having the liqui
 
 (Note: Since writing this section I have changed how I pipe cooling liquid into the thermo aquatuner. My current approach is pictured at the end of this page.)
 
-The polymer press automation is to have it stop when the smart storage bin is full. (See [Getting started with automation](https://www.guidesnotincluded.com/getting-started-with-automation) for a closer look at it.)
+The polymer press automation is to have it stop when the smart storage bin is full. (See [Getting started with automation](getting-started-with-automation.md) for a closer look at it.)
 
 This design has a very small area where water is intended to pool by the polymer press (in-between the airflow tiles). For water to only pool there you will need to add a lot of cooling around (and over) the polymer press.
 

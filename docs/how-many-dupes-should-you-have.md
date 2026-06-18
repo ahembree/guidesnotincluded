@@ -51,8 +51,8 @@ As a rough target to aim for, I'd say you can start piling on more and more dupe
 
 More specifically, learning how to build:
 
-* a [SPOM](https://www.guidesnotincluded.com/to-know-the-spom-is-to-love-the-spom), and
-* a [thermo aquatuner & steam turbine](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop) cooling setup
+* a [SPOM](to-know-the-spom-is-to-love-the-spom.md), and
+* a [thermo aquatuner & steam turbine](thermo-aquatuner-steam-turbine-cooling-loop.md) cooling setup
 
 The SPOM will sort out your oxygen. And cooling will enable lots of things: you can keep your base cool enough for plants to grow, you can tame water geysers to fill your water supply, you can tame metal geysers for resources, etc.
 

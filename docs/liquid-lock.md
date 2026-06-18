@@ -15,7 +15,7 @@ There are many ways to design a liquid lock. This is a common, simple one that i
 
 You can stop temperature transfer by putting two liquid locks next to one another and then sucking out the air to create a vacuum between them.
 
-For more on liquid locks, see [Liquid lock basics](https://www.guidesnotincluded.com/liquid-lock-basics)[.](https://www.guidesnotincluded.com/liquid-lock-basics)
+For more on liquid locks, see [Liquid lock basics](liquid-lock-basics.md)[.](liquid-lock-basics.md)
 
 ---
 

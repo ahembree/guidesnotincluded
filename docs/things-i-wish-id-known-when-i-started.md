@@ -9,7 +9,7 @@ archive_snapshot: https://web.archive.org/web/20250710144345id_/https://www.guid
 
 I [asked the community](https://forums.kleientertainment.com/forums/topic/140561-things-you-wish-youd-known-when-you-started/) what things they wished they had known when they started. Here's what they said. (Presented in alphabetical order.)
 
-Want to add something to the list? Wonderful! Head over to the [Feedback](https://www.guidesnotincluded.com/guide-feedback) section of the guide and drop me a line.
+Want to add something to the list? Wonderful! Head over to the [Feedback](guide-feedback.md) section of the guide and drop me a line.
 
 By blakemw
 

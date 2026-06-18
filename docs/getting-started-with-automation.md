@@ -66,7 +66,7 @@ Basic Coal Generator automation. Using Automation Wire, the Coal Generators are 
 
 ## AUTOMATING YOUR COAL GENERATOR
 
-The coal generator and power transformer are covered [earlier in this guide](https://www.guidesnotincluded.com/the-early-game). Here, we focus on automation.
+The coal generator and power transformer are covered [earlier in this guide](the-early-game.md). Here, we focus on automation.
 
 Research required:
 
@@ -189,7 +189,7 @@ Required research
 * Advanced Automation (also in Computers)
 * Improved Ventilation (in Gases)
 
-Pictures of the build and its automation overlay, as well as the various sensor settings, can be found [in the builds section](https://www.guidesnotincluded.com/carbon-skimmer-automation-jahws) of this website. I'll cover them here, too. But I'll start by going over what's involved and how it works.
+Pictures of the build and its automation overlay, as well as the various sensor settings, can be found [in the builds section](carbon-skimmer-automation-jahws.md) of this website. I'll cover them here, too. But I'll start by going over what's involved and how it works.
 
 (If you aren't that interested in how or why this contraption works, skip ahead to the actual building of the thing.)
 

@@ -97,11 +97,11 @@ There are two main options regarding SPOMs and cooling:
 
 (If I have a small colony, I usually use a combination of the two: I have a cooling loop that runs through my base and that also passes through my SPOM, cooling both.)
 
-Building a SPOM isn't that difficult, the challenge tends to be cooling. Or, more specifically, getting your hands on the materials needed for cooling builds. Specifically, [plastic](https://www.guidesnotincluded.com/getting-oil-petroleum-and-plastic) and/or [steel](https://www.guidesnotincluded.com/getting-steel).
+Building a SPOM isn't that difficult, the challenge tends to be cooling. Or, more specifically, getting your hands on the materials needed for cooling builds. Specifically, [plastic](getting-oil-petroleum-and-plastic.md) and/or [steel](getting-steel.md).
 
 Here are three alternatives for cooling, presented in increasing order of difficulty.
 
-1. An easy albeit temporary approach to cooling is running the oxygen gas pipes from your SPOM through an ice biome. This will cool down the oxygen in the pipes. (Use radiant pipes for improved [temperature transfer](https://www.guidesnotincluded.com/heat-transfer-basics) between the oxygen and the ice biome.)
+1. An easy albeit temporary approach to cooling is running the oxygen gas pipes from your SPOM through an ice biome. This will cool down the oxygen in the pipes. (Use radiant pipes for improved [temperature transfer](heat-transfer-basics.md) between the oxygen and the ice biome.)
 
 Some downsides to this approach are that you will slowly start to heat up the ice biome, and that it is difficult to control the temperature oxygen enters the base at.
 
@@ -113,10 +113,10 @@ This is the end-game cooling build that, as long as you have enough power, can s
 
 Pictures and overlays for cooling options 2 and 3 above are included on this site. I also cover them both more in-depth later in the guide. Links:
 
-* [Anti entropy thermo-nullifier cooling](https://www.guidesnotincluded.com/anti-entropy-thermo-nullifier-cooling) (has a description of how it works and some build options with overlays)
-* [Cooling loop](https://www.guidesnotincluded.com/aquatuner-steam-turbine-cooling-loo) (Thermo Aquatuner and Steam Turbine)
+* [Anti entropy thermo-nullifier cooling](anti-entropy-thermo-nullifier-cooling.md) (has a description of how it works and some build options with overlays)
+* [Cooling loop](aquatuner-steam-turbine-cooling-loo.md) (Thermo Aquatuner and Steam Turbine)
 
-  + Or, if you want some theory, there is also an [introduction to how the cooling loop works](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop), with overlays
+  + Or, if you want some theory, there is also an [introduction to how the cooling loop works](thermo-aquatuner-steam-turbine-cooling-loop.md), with overlays
 
 To reiterate a point from earlier: if your base is a "normal" temperature, it will take a long time for your SPOM to heat it up significantly. It will take a long time even for the area inside the SPOM to heat up to +75C, the point where (non-gold) machines will take damage.
 
@@ -128,7 +128,7 @@ I have postponed implementing SPOM cooling somtimes by hundreds of cycles and ha
 
 Neural Vacillator
 
-You can build SPOMs of various sizes. This site has build guides for two SPOMs: a [small one (oxygen: 1kg/s)](https://www.guidesnotincluded.com/spom-1kg-s) and a [large one (oxygen: 3kg/s)](https://www.guidesnotincluded.com/spom-3kg-s). Which to choose mainly depends on how many dupes you want to be able to support.
+You can build SPOMs of various sizes. This site has build guides for two SPOMs: a [small one (oxygen: 1kg/s)](spom-1kg-s.md) and a [large one (oxygen: 3kg/s)](spom-3kg-s.md). Which to choose mainly depends on how many dupes you want to be able to support.
 
 Dupe oxygen consumption:
 
@@ -216,7 +216,7 @@ The upper layer, from right to left, has:
 
 In addition to this, the SPOM has Atmo Sensors (not included in the pics above) connected to the gas pumps. They keep the balance between oxygen and hydrogen, and make sure the SPOM's gas levels don't get too low. And, finally, there is a whole mess of wiring, piping, etc. (Also not included in the pics above.)
 
-Keep in mind that the machines on the upper layer also generate heat. And a Gas Reservoir full of hot hydrogen can also let off heat. One solution is to enclose the area. Another option, and what I do, is to run cooling through the area. ([Cooling loops](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop) are covered later in the guide.)
+Keep in mind that the machines on the upper layer also generate heat. And a Gas Reservoir full of hot hydrogen can also let off heat. One solution is to enclose the area. Another option, and what I do, is to run cooling through the area. ([Cooling loops](thermo-aquatuner-steam-turbine-cooling-loop.md) are covered later in the guide.)
 
 ## IMPORTANT: INCLUDE AN OVERFLOW FOR EXCESS HYDROGEN
 
@@ -239,7 +239,7 @@ What you do with your excess hydrogen is your business - just make sure you do s
 * Vent it into space.
 * Any combination of the above
 
-The gas pipe overflow mechanism is the same as for water. Have your main hydrogen line go along a Gas Bridge and your overflow pipe branch off from the Gas Bridge input pipe section. (For a refresher, see: [Liquid overflow mechanism](https://www.guidesnotincluded.com/recycling-toilet-water).)
+The gas pipe overflow mechanism is the same as for water. Have your main hydrogen line go along a Gas Bridge and your overflow pipe branch off from the Gas Bridge input pipe section. (For a refresher, see: [Liquid overflow mechanism](recycling-toilet-water.md).)
 
 ![ONI-SPOM-example_gas.png](assets/ONI-SPOM-example_gas-d18b026992.avif)
 
@@ -297,8 +297,8 @@ That's about it - time to get building! Once you are comfortable with SPOM basic
 
 The most difficult thing with any new build, for me, isn't the actual building - it's getting up the nerve to start. Here are links to detailed pictures of two SPOMs and various overlays, to help you on your way to unlimited oxygen.
 
-* [small SPOM](https://www.guidesnotincluded.com/spom-1kg-s) (1kg/s oxygen)
-* [large SPOM](https://www.guidesnotincluded.com/spom-3kg-s) (3kg/s oxygen)
+* [small SPOM](spom-1kg-s.md) (1kg/s oxygen)
+* [large SPOM](spom-3kg-s.md) (3kg/s oxygen)
 
 The pages linked above also include links to Francis John's YouTube videos explaining the builds.
 

@@ -35,7 +35,7 @@ You can also put the liquid reservoir and thermo sensor after the thermo aquatun
 
 For an introduction to the thermo aquatuner and steam turbine cooling loop design, see:
 
-[Thermo aquatuner & steam turbine cooling loop.](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop)
+[Thermo aquatuner & steam turbine cooling loop.](thermo-aquatuner-steam-turbine-cooling-loop.md)
 
 (That page also has overlays of a version with the liquid reservoir after the thermo aquatuner.)
 

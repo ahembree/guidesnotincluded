@@ -115,7 +115,7 @@ Both are unlocked through research and are found in the Colony Development resea
 
 Getting to space can be as simple as slapping a solo spacefarer nosecone on top of an engine. However, the solo spacefarer nosecone is very small. (So small, in fact, that I have stopped using it entirely - I unlock the Spacefarer Module before building my first rocket.)
 
-Unlocking the Spacefarer Module requires doing a bit of the kind of research that uses radbolts. (But don't be intimidated by this - there is [a separate guide](https://www.guidesnotincluded.com/spaced-out-research-guide) for how to do radbolt research. And you won't need that many.)
+Unlocking the Spacefarer Module requires doing a bit of the kind of research that uses radbolts. (But don't be intimidated by this - there is [a separate guide](spaced-out-research-guide.md) for how to do radbolt research. And you won't need that many.)
 
 Whatever build height is left for your rocket you can fill with useful stuff. Have a look at the options. For your first rocket, consider things like solar panels and/or a battery.
 
@@ -302,7 +302,7 @@ There is much more to space. A key element to exploring it, and getting at the r
 
 Upgrading your rockets so they can go further will require researching new kinds of engines, and getting your hands on new kinds of rocket fuel for those engines.
 
-I tend to do a lot of my space exploration and colonization with the (larger) petroleum engine. (There is also a smaller petroleum engine.) So that is one option for a next goal in your space exploration. (How to get petroleum is covered [earlier in the guide](https://www.guidesnotincluded.com/getting-oil-petroleum-and-plastic).)
+I tend to do a lot of my space exploration and colonization with the (larger) petroleum engine. (There is also a smaller petroleum engine.) So that is one option for a next goal in your space exploration. (How to get petroleum is covered [earlier in the guide](getting-oil-petroleum-and-plastic.md).)
 
 Once you upgrade to the larger petroleum engine, you will need to add fuel tanks to your rocket. You will need one tank for solid oxidizer (either fertilizer or oxylite) and one or two tanks for petroleum. Two tanks gives you twice the flight distance: you can travel 10 tiles with one tank of petroleum, 20 tiles with two.
 
@@ -312,7 +312,7 @@ The best engine in the game is the liquid hydrogen engine. It uses liquid oxygen
 
 If you do get so far as to being ready to switch to the hydrogen rocket - congratulations! Sadly, I'm not the guy to help you with that. Whenever I build liquid hydrogen and oxygen making contraptions, I just do whatever Francis John says to do (and then cross my fingers and hope I didn't screw anything up).
 
-You can find an overview of such a build in the builds section: [Liquid hydrogen & oxygen, small](https://www.guidesnotincluded.com/liquid-hydrogen-oxygen-small). It also has a link to Francis John's YouTube video explaining the build.
+You can find an overview of such a build in the builds section: [Liquid hydrogen & oxygen, small](liquid-hydrogen-oxygen-small.md). It also has a link to Francis John's YouTube video explaining the build.
 
 A final note, on analyzing tiles in space: if you build a telescope inside a dupe module, the telescope can be used to analyze space tiles. Common practice is to build it against the left wall of the module. (Which has to do with the telescope's area of effect.)
 

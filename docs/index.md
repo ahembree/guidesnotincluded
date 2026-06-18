@@ -19,43 +19,43 @@ Were you actually looking for some other Oxygen Not Included resource or website
 
 (What can I say - I have watched a lot of Francis John.)
 
-[ANTI ENTROPY THERMO-NULLIFIER, COOLING LOOP](https://www.guidesnotincluded.com/anti-entropy-thermo-nullifier)
+[ANTI ENTROPY THERMO-NULLIFIER, COOLING LOOP](anti-entropy-thermo-nullifier.md)
 
 Source: Francis John YouTube video
 
-[CARBON SKIMMER AUTOMATION](https://www.guidesnotincluded.com/carbon-skimmer-automation-jahws)
+[CARBON SKIMMER AUTOMATION](carbon-skimmer-automation-jahws.md)
 
 Source: Jahws guide on Steam
 
-[DECONTAMINATING GERMY WATER, CHLORINE-BASED](https://www.guidesnotincluded.com/decontaminating-germy-water-francis)
+[DECONTAMINATING GERMY WATER, CHLORINE-BASED](decontaminating-germy-water-francis.md)
 
 Source: Francis John YouTube video
 
-[HYDROGEN VENT TAMING](https://www.guidesnotincluded.com/hydrogen-vent-taming)
+[HYDROGEN VENT TAMING](hydrogen-vent-taming.md)
 
 Source: Mullematsch YouTube video
 
-[LIQUID LOCK](https://www.guidesnotincluded.com/liquid-lock)
+[LIQUID LOCK](liquid-lock.md)
 
 Source: various
 
-[LIQUID HYDROGEN & OXYGEN, SMALL](https://www.guidesnotincluded.com/liquid-hydrogen-oxygen-small)
+[LIQUID HYDROGEN & OXYGEN, SMALL](liquid-hydrogen-oxygen-small.md)
 
 Source: Francis John YouTube video
 
-[METAL REFINERY + THERMO AQUATUNER AND STEAM TURBINE COOLING LOOP](https://www.guidesnotincluded.com/aquatuner-steam-turbine-cooling-loo)
+[METAL REFINERY + THERMO AQUATUNER AND STEAM TURBINE COOLING LOOP](aquatuner-steam-turbine-cooling-loo.md)
 
 Source: Francis John YouTube video
 
-[OIL WELL WITH LIQUID LOCK](https://www.guidesnotincluded.com/oil-well-with-liquid-lock)
+[OIL WELL WITH LIQUID LOCK](oil-well-with-liquid-lock.md)
 
 Source: Francis John YouTube video
 
-[SPOM, OXYGEN: 1KG/S](https://www.guidesnotincluded.com/spom-1kg-s)
+[SPOM, OXYGEN: 1KG/S](spom-1kg-s.md)
 
 Source: Francis John YouTube video
 
-[SPOM, OXYGEN: 3KG/S (THE FULL RODRIGUEZ](https://www.guidesnotincluded.com/spom-3kg-s))
+[SPOM, OXYGEN: 3KG/S (THE FULL RODRIGUEZ](spom-3kg-s.md))
 
 Source: Francis John YouTube video
 
@@ -71,61 +71,61 @@ Guides
 
 ## The Complete Beginner's Completely Incomplete Guide to Oxygen Not Included (work in progress)
 
-[Guide overview](https://www.guidesnotincluded.com/complete-beginners-completely-incomplete-guide-to-oxygen-not-included)
+[Guide overview](complete-beginners-completely-incomplete-guide-to-oxygen-not-included.md)
 
-[The base game compared with the Spaced Out DLC](https://www.guidesnotincluded.com/base-game-versus-spaced-out-dlc)
+[The base game compared with the Spaced Out DLC](base-game-versus-spaced-out-dlc.md)
 
-[Choosing duplicants](https://www.guidesnotincluded.com/choosing-duplicants)
+[Choosing duplicants](choosing-duplicants.md)
 
-[The very early game](https://www.guidesnotincluded.com/the-very-early-game)
+[The very early game](the-very-early-game.md)
 
-[The early game](https://www.guidesnotincluded.com/the-early-game)
+[The early game](the-early-game.md)
 
-[Ranching basics](https://www.guidesnotincluded.com/ranching-basics)
+[Ranching basics](ranching-basics.md)
 
-[How many dupes "should" you have?](https://www.guidesnotincluded.com/how-many-dupes-should-you-have)
+[How many dupes "should" you have?](how-many-dupes-should-you-have.md)
 
-[Getting started with automation](https://www.guidesnotincluded.com/getting-started-with-automation)
+[Getting started with automation](getting-started-with-automation.md)
 
-[Recycling bathroom water](https://www.guidesnotincluded.com/recycling-toilet-water)
+[Recycling bathroom water](recycling-toilet-water.md)
 
-[Temperature transfer basics](https://www.guidesnotincluded.com/heat-transfer-basics)
+[Temperature transfer basics](heat-transfer-basics.md)
 
-[Pipes and pumps: liquid and gas flow basics](https://www.guidesnotincluded.com/pipes-and-pumps) (work in progress)
+[Pipes and pumps: liquid and gas flow basics](pipes-and-pumps.md) (work in progress)
 
-[Getting (more) water](https://www.guidesnotincluded.com/getting-more-water)
+[Getting (more) water](getting-more-water.md)
 
-[Oxygen: To know the SPOM is to love the SPOM](https://www.guidesnotincluded.com/to-know-the-spom-is-to-love-the-spom)
+[Oxygen: To know the SPOM is to love the SPOM](to-know-the-spom-is-to-love-the-spom.md)
 
-[Spaced Out research: Radbolts, data banks and you](https://www.guidesnotincluded.com/spaced-out-research-guide)
+[Spaced Out research: Radbolts, data banks and you](spaced-out-research-guide.md)
 
-[Atmo Suit basics](https://www.guidesnotincluded.com/atmo-suit-basics)
+[Atmo Suit basics](atmo-suit-basics.md)
 
-[Low-tech plastic: Drecko ranching](https://www.guidesnotincluded.com/low-tech-plastic-drecko-ranching)
+[Low-tech plastic: Drecko ranching](low-tech-plastic-drecko-ranching.md)
 
-[Liquid lock basics](https://www.guidesnotincluded.com/liquid-lock-basics)
+[Liquid lock basics](liquid-lock-basics.md)
 
-[Dealing with slimelung](https://www.guidesnotincluded.com/dealing-with-slimelung)
+[Dealing with slimelung](dealing-with-slimelung.md)
 
-[Getting oil, petroleum, and plastic](https://www.guidesnotincluded.com/getting-oil-petroleum-and-plastic)
+[Getting oil, petroleum, and plastic](getting-oil-petroleum-and-plastic.md)
 
-[Getting steel](https://www.guidesnotincluded.com/getting-steel)
+[Getting steel](getting-steel.md)
 
-[Anti entropy thermo-nullifier cooling](https://www.guidesnotincluded.com/anti-entropy-thermo-nullifier-cooling)
+[Anti entropy thermo-nullifier cooling](anti-entropy-thermo-nullifier-cooling.md)
 
-[The thermo aquatuner & steam turbine cooling loop](https://www.guidesnotincluded.com/thermo-aquatuner-steam-turbine-cooling-loop)
+[The thermo aquatuner & steam turbine cooling loop](thermo-aquatuner-steam-turbine-cooling-loop.md)
 
-[Metal volcano taming basics](https://www.guidesnotincluded.com/taming-metal-volcanos)
+[Metal volcano taming basics](taming-metal-volcanos.md)
 
-[Mini industry (cramming it all in)](https://www.guidesnotincluded.com/mini-industry)
+[Mini industry (cramming it all in)](mini-industry.md)
 
-[Getting to space (DLC)](https://www.guidesnotincluded.com/getting-to-space-dlc)
+[Getting to space (DLC)](getting-to-space-dlc.md)
 
-[Dealing with meteor showers](https://www.guidesnotincluded.com/dealing-with-meteor-showers)
+[Dealing with meteor showers](dealing-with-meteor-showers.md)
 
-[Community corner: Things I wish I'd known when I started](https://www.guidesnotincluded.com/things-i-wish-id-known-when-i-started)
+[Community corner: Things I wish I'd known when I started](things-i-wish-id-known-when-i-started.md)
 
-[Guide feedback and content requests](https://www.guidesnotincluded.com/guide-feedback)
+[Guide feedback and content requests](guide-feedback.md)
 
 ![ONI_General_6.png](assets/ONI_General_6-41c0b5b11d.png)
 
