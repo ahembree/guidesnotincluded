@@ -6,8 +6,10 @@ site_url: https://ahembree.github.io/guidesnotincluded/
 repo_url: https://github.com/ahembree/guidesnotincluded
 repo_name: ahembree/guidesnotincluded
 copyright: >-
-  Content archived from guidesnotincluded.com via the Internet Archive.
-  Original content belongs to its respective author(s).
+  Guides © Some Random Finn (guidesnotincluded.com), licensed
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+  Non-commercial archive via the Internet Archive — game imagery © Klei
+  Entertainment. See <a href="attribution/">Attribution &amp; licensing</a>.
 
 theme:
   name: material

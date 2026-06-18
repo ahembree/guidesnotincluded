@@ -19,6 +19,8 @@ Pages.
 | `requirements.txt` | Python deps for building the site (MkDocs). |
 | `.github/workflows/deploy.yml` | Builds and deploys the site to GitHub Pages on push to `main`. |
 | `RUNBOOK.md` | Step-by-step procedure to (re)generate the content. |
+| `LICENSE` | Licensing & attribution (CC BY-NC-SA 4.0 for the guide text). |
+| `docs/attribution.md` | The on-site attribution & licensing page. |
 
 ## Quick start
 
@@ -38,8 +40,24 @@ mkdocs serve
 See **[RUNBOOK.md](RUNBOOK.md)** for details, including how to enable network
 access and GitHub Pages.
 
-## Attribution
+## Attribution & licensing
 
-Content is archived from guidesnotincluded.com via the Internet Archive and
-remains the property of its original author(s). This repository exists to
-preserve and re-host static content that is otherwise no longer accessible.
+This is an **unofficial, non-commercial community archive** of
+guidesnotincluded.com, created by **Some Random Finn**, restored from the
+Internet Archive.
+
+- **Guide text** (`docs/`, excluding images) is © Some Random Finn and licensed
+  **[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)** — the
+  licence the author published under. This archive redistributes it under the
+  same terms (ShareAlike), credits the source on every page, and is
+  non-commercial. Each page links back to its original URL and Wayback snapshot
+  and notes that it was reformatted from HTML to Markdown.
+- **Images** (`docs/assets/`) come from the ONI Wiki, the author's gameplay, and
+  **Klei Entertainment**; they are **not** covered by the CC licence and remain
+  © their respective owners (game imagery © Klei, used under fan-content terms).
+- **Build credits** (Francis John, Jahws, Mullematsch, the ONI community) are
+  preserved in-page.
+
+Full details: **[LICENSE](LICENSE)** and the on-site
+**[Attribution & licensing](docs/attribution.md)** page. Rights holders may
+request removal via GitHub issues.

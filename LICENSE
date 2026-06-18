@@ -1,0 +1,74 @@
+# Licensing & attribution
+
+This repository is an **unofficial, non-commercial community archive** of
+**guidesnotincluded.com**, an *Oxygen Not Included* guides site created by
+**"Some Random Finn"** (contact on the original site: `somerandomfinn` at
+`proton.me`). The original site is offline; this archive was rebuilt from the
+**Internet Archive** (Wayback Machine) and reformatted from HTML to Markdown.
+
+Different parts of this repository are covered by different terms.
+
+## 1. The guide content (everything under `docs/`, excluding images)
+
+The textual guides were published by the original author under a
+**Creative Commons Attribution-NonCommercial-ShareAlike** licence. The author's
+own statement (preserved on the "Complete Beginner's Guide" page) reads:
+
+> "This guide is published under a CC-BY-NC-SA license. Which basically means
+> non-commercial use/reuse of my scribblings is fine."
+
+The original did not pin a version, so this archive applies and redistributes
+the text under **CC BY-NC-SA 4.0 International**:
+
+> https://creativecommons.org/licenses/by-nc-sa/4.0/
+> Legal code: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+What that means here:
+
+- **BY — Attribution.** Original work © Some Random Finn / guidesnotincluded.com.
+  Every page links back to its source URL and Wayback snapshot, and notes that
+  it was reformatted. Keep that credit if you reuse the content.
+- **NC — NonCommercial.** This archive is not monetised (no ads, no payment).
+  Do not use the content commercially.
+- **SA — ShareAlike.** This archive (an adaptation/reformatting of the original)
+  is distributed under the same CC BY-NC-SA 4.0 licence. Redistribute any
+  derivative under the same terms.
+
+**Changes made in this archive:** crawled from the Wayback Machine, main content
+extracted from the original Wix HTML, converted to Markdown, images localised,
+and site navigation/boilerplate removed. A few pages are incomplete because the
+source captures were incomplete or unavailable.
+
+## 2. Images (`docs/assets/`)
+
+Per the original author, the images come from several sources — the
+**Oxygen Not Included Wiki**, the author's own **gameplay footage**, and
+**images by Klei**. They are **not** all the author's own work and are therefore
+**not** covered by the CC BY-NC-SA licence above. They are reproduced here for
+non-commercial, archival/reference purposes only:
+
+- *Oxygen Not Included*, its art, screenshots and assets are © **Klei
+  Entertainment**. Game imagery is used under Klei's community/fan-content
+  allowances; all rights remain with Klei.
+- ONI Wiki imagery remains under the wiki's respective terms.
+
+If you are a rights holder and want an image removed, please open an issue.
+
+## 3. Build & guide credits (third parties)
+
+Individual builds and techniques are credited in-page to their original
+creators, including **Francis John**, **Jahws**, **Mullematsch**, and the
+broader *Oxygen Not Included* community (Reddit, Steam, YouTube). Those credits
+are preserved in the restored pages.
+
+## 4. The crawler / tooling (`scripts/`, `mkdocs.yml`, workflows)
+
+The restoration tooling in this repository was written by the repository owner
+and is provided as-is for archival use. It is independent of the content
+licence above.
+
+---
+
+This archive is a fan effort to preserve freely-licensed community
+documentation. It is not affiliated with or endorsed by Some Random Finn or
+Klei Entertainment.

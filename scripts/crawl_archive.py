@@ -78,6 +78,7 @@ class CrawlStats:
     pages: int = 0
     assets: int = 0
     errors: list[str] = field(default_factory=list)
+    seen_assets: dict[str, str] = field(default_factory=dict)  # src -> local filename
 
 
 def log(msg: str) -> None:
@@ -225,21 +226,98 @@ def resolve_index_collisions(paths: dict[str, str]) -> dict[str, str]:
 # --------------------------------------------------------------------------- #
 # HTML -> Markdown
 # --------------------------------------------------------------------------- #
+def _clean_title(text: str) -> str:
+    # Drop the repetitive Wix site-name suffix ("Page | Guides Not Included").
+    text = re.sub(r"\s*[|–—-]\s*(Guides Not Included|guidesnotincluded\.com)\s*$",
+                  "", text.strip(), flags=re.IGNORECASE)
+    return text.strip()
+
+
 def extract_title(soup: BeautifulSoup, fallback: str) -> str:
     for selector in ("meta[property='og:title']", "meta[name='title']"):
         tag = soup.select_one(selector)
         if tag and tag.get("content"):
-            return tag["content"].strip()
+            return _clean_title(tag["content"]) or fallback
     if soup.title and soup.title.string:
-        return soup.title.string.strip()
+        return _clean_title(soup.title.string) or fallback
     h1 = soup.find("h1")
     if h1 and h1.get_text(strip=True):
-        return h1.get_text(strip=True)
+        return _clean_title(h1.get_text(strip=True)) or fallback
     return fallback
 
 
+# Wix renders each page's content inside a <main id="PAGES_CONTAINER">
+# landmark, with the site chrome in sibling <header id="SITE_HEADER"> /
+# <footer id="SITE_FOOTER">. readability discards the build screenshots that
+# ARE the point of these guides, so for Wix pages we extract that landmark
+# directly -- it keeps both the prose and the images and excludes the chrome.
+WIX_MAIN_SELECTORS = ("main#PAGES_CONTAINER", "main", "#SITE_PAGES")
+_CHROME_TAGS = ["script", "style", "noscript", "iframe", "header", "footer", "nav"]
+# Labels of the Wix prev/home/next page-pager that gets baked into the content.
+_PAGER_WORDS = {"previous", "prev", "home", "next"}
+
+
+def strip_wix_pager(node) -> None:
+    """Remove the Wix "Previous / Home / Next" page-pager that Wix bakes into
+    the page body as a handful of one-word blocks.
+
+    To avoid deleting a legitimate lone word ("Home", "Next"), only strip when
+    at least two distinct pager labels are present -- i.e. it really is a pager.
+    """
+    blocks = []
+    for b in node.find_all(["p", "div", "section", "nav", "li"]):
+        if b.parent is None:
+            continue
+        words = b.get_text(" ", strip=True).lower().split()
+        if words and len(words) <= 3 and set(words) <= _PAGER_WORDS:
+            blocks.append(b)
+    labels = set()
+    for b in blocks:
+        labels.update(b.get_text(" ", strip=True).lower().split())
+    if len(labels) >= 2:
+        for b in blocks:
+            if b.parent is not None:  # may already be gone with an ancestor
+                b.decompose()
+
+
+def unwrap_self_links(soup, page_url: str) -> None:
+    """Replace <a> tags that point at this very page with their text.
+
+    Wix in-page anchor menus lose their ``#fragment`` in the archive, so every
+    "Contents" entry ends up linking to the page root. Unwrapping turns that
+    broken navigation back into a plain (non-clickable) list of section names.
+    """
+    here = normalize_key(page_url)
+    for a in soup.find_all("a"):
+        href = a.get("href")
+        if not href:
+            continue
+        m = re.match(r"^https?://web\.archive\.org/web/\d+(?:[a-z]{2}_)?/(.*)$", href)
+        if m:
+            href = m.group(1)
+        href = href.split("#", 1)[0]
+        if href.startswith("http") and normalize_key(href) == here:
+            a.unwrap()
+
+
 def extract_main_html(html: str) -> str:
-    """Best-effort extraction of the primary content region."""
+    """Best-effort extraction of the primary content region.
+
+    Order matters: try the Wix page-content landmark first (it preserves the
+    images and excludes the header/footer), then readability for generic prose
+    pages, then the whole <body> minus obvious chrome.
+    """
+    soup = BeautifulSoup(html, "lxml")
+    for selector in WIX_MAIN_SELECTORS:
+        node = soup.select_one(selector)
+        if node is None:
+            continue
+        for tag in node.select(", ".join(_CHROME_TAGS)):
+            tag.decompose()
+        if len(node.get_text(strip=True)) >= 200:
+            strip_wix_pager(node)
+            return str(node)
+
     # readability gives a clean <article>-like summary for prose pages.
     try:
         doc = Document(html)
@@ -251,10 +329,12 @@ def extract_main_html(html: str) -> str:
         pass
 
     # Fallback: whole <body> minus obvious chrome.
-    soup = BeautifulSoup(html, "lxml")
-    for tag in soup(["script", "style", "noscript", "iframe", "header", "footer", "nav"]):
+    soup2 = BeautifulSoup(html, "lxml")
+    for tag in soup2(_CHROME_TAGS):
         tag.decompose()
-    body = soup.body or soup
+    for el in soup2.select("#SCROLL_TO_TOP, #SCROLL_TO_BOTTOM, #SITE_HEADER, #SITE_FOOTER"):
+        el.decompose()
+    body = soup2.body or soup2
     return str(body)
 
 
@@ -265,23 +345,91 @@ def clean_archive_links(markdown: str) -> str:
         r"(\1)",
         markdown,
     )
+    # Wix pads its layout with zero-width-space "empty paragraphs"; drop them.
+    markdown = markdown.replace("​", "").replace("﻿", "")
+    markdown = re.sub(r"[ \t]+\n", "\n", markdown)
     markdown = re.sub(r"\n{3,}", "\n\n", markdown)
     return markdown.strip() + "\n"
+
+
+def _norm_heading(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+
+
+# The site-wide tagline banner Wix renders as a heading at the top of every page.
+_SITE_TAGLINE_N = _norm_heading(
+    "The Complete Beginner's Completely Incomplete Guide to Oxygen Not Included"
+)
+
+
+def tidy_body(markdown: str) -> str:
+    """Drop residual Wix banner noise that survives into the Markdown body:
+    the site-wide tagline heading and meaningless "Anchor N" marker lines.
+    """
+    out = []
+    for line in markdown.split("\n"):
+        s = line.strip()
+        m = re.match(r"^#{1,6}\s+(.*)$", s)
+        if m and _norm_heading(m.group(1)) == _SITE_TAGLINE_N:
+            continue
+        if re.fullmatch(r"anchor\s*\d+", s, flags=re.IGNORECASE):
+            continue
+        out.append(line)
+    text = re.sub(r"\n{3,}", "\n\n", "\n".join(out))
+    return text.strip() + "\n"
 
 
 # --------------------------------------------------------------------------- #
 # Asset handling
 # --------------------------------------------------------------------------- #
-def asset_filename(src: str) -> str:
-    p = urlsplit(src)
-    base = os.path.basename(p.path) or "image"
-    base = unquote(base)
-    name, ext = os.path.splitext(base)
-    if not ext or len(ext) > 6:
-        ext = ".img"
+_CT_EXT = {
+    "image/avif": ".avif", "image/webp": ".webp", "image/jpeg": ".jpg",
+    "image/png": ".png", "image/gif": ".gif", "image/svg+xml": ".svg",
+    "image/bmp": ".bmp", "image/x-icon": ".ico",
+}
+
+
+def sniff_image_ext(data: bytes) -> str | None:
+    """Return a file extension based on the image's *magic bytes*.
+
+    This is the only reliable signal: Wix's ``enc_avif`` URLs are served as
+    PNG/JPEG/AVIF depending on the (capturing browser's) Accept header, so the
+    URL and even the archived Content-Type can disagree with the actual bytes.
+    """
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        return ".png"
+    if data[:3] == b"\xff\xd8\xff":
+        return ".jpg"
+    if data[:6] in (b"GIF87a", b"GIF89a"):
+        return ".gif"
+    if data[:4] == b"RIFF" and data[8:12] == b"WEBP":
+        return ".webp"
+    if data[:2] == b"BM":
+        return ".bmp"
+    if data[:4] == b"\x00\x00\x01\x00":
+        return ".ico"
+    if len(data) >= 12 and data[4:8] == b"ftyp":  # ISO-BMFF (AVIF/HEIF)
+        brand = data[8:12]
+        if brand in (b"heic", b"heix", b"mif1", b"msf1"):
+            return ".heic"
+        return ".avif"
+    head = data[:512].lstrip().lower()
+    if head[:5] == b"<?xml" or head[:4] == b"<svg":
+        return ".svg"
+    return None
+
+
+def asset_stem(src: str) -> str:
+    """Format-independent local name for a source URL (``name-<digest>``)."""
+    base = unquote(os.path.basename(urlsplit(src).path)) or "image"
+    name = os.path.splitext(base)[0]
     digest = hashlib.sha1(src.encode()).hexdigest()[:10]
     name = re.sub(r"[^A-Za-z0-9._-]+", "-", name)[:48].strip("-") or "image"
-    return f"{name}-{digest}{ext}"
+    return f"{name}-{digest}"
+
+
+def asset_filename(src: str, ext: str) -> str:
+    return f"{asset_stem(src)}{ext}"
 
 
 def to_wayback_resource(src: str, page_original: str, timestamp: str) -> str | None:
@@ -319,22 +467,45 @@ def download_assets(
         src = img.get("src") or img.get("data-src")
         if not src:
             continue
-        wb = to_wayback_resource(src, page_original, timestamp)
-        if not wb:
-            continue
-        fname = asset_filename(src)
-        dest = assets_dir / fname
         try:
-            if not dest.exists():
-                r = http_get(s, wb, tries=3, timeout=60)
-                dest.write_bytes(r.content)
-                stats.assets += 1
+            fname = stats.seen_assets.get(src)
+            if fname is None:  # first time we see this source URL this run
+                stem = asset_stem(src)
+                # Reuse an already-downloaded file (makes re-runs idempotent
+                # and skips the network round-trip).
+                existing = next((p for p in assets_dir.iterdir()
+                                 if p.name.startswith(stem + ".")), None)
+                if existing is not None:
+                    fname = existing.name
+                else:
+                    wb = to_wayback_resource(src, page_original, timestamp)
+                    if not wb:
+                        continue
+                    r = http_get(s, wb, tries=3, timeout=60)
+                    data = r.content
+                    ct = (r.headers.get("Content-Type") or "").split(";")[0].strip().lower()
+                    url_ext = os.path.splitext(urlsplit(src).path)[1].lower()
+                    if not re.fullmatch(r"\.[a-z0-9]{1,5}", url_ext):
+                        url_ext = ""
+                    ext = sniff_image_ext(data) or _CT_EXT.get(ct) or url_ext or ".img"
+                    fname = asset_filename(src, ext)
+                    (assets_dir / fname).write_bytes(data)
+                    stats.assets += 1
+                stats.seen_assets[src] = fname
             img["src"] = rel_prefix + fname
-            for attr in ("srcset", "data-src", "data-srcset"):
+            img["loading"] = "lazy"
+            for attr in ("srcset", "data-src", "data-srcset", "sizes"):
                 if img.has_attr(attr):
                     del img[attr]
+            # Wix wraps each image in a lightbox <a> pointing at the (now dead)
+            # full-size original; unwrap it so the image just renders.
+            parent = img.parent
+            if parent is not None and parent.name == "a":
+                parent.replace_with(img)
         except Exception as exc:  # noqa: BLE001
             stats.errors.append(f"asset {src}: {exc}")
+            # Drop the image rather than leave a broken remote/dead reference.
+            img.decompose()
 
 
 # --------------------------------------------------------------------------- #
@@ -356,12 +527,14 @@ def convert_capture(
 
     main_html = extract_main_html(html)
     main_soup = BeautifulSoup(main_html, "lxml")
+    unwrap_self_links(main_soup, cap.original)
 
     if download_imgs:
         download_assets(s, main_soup, cap.original, cap.timestamp, docs_dir, rel_md_path, stats)
 
     markdown = md(str(main_soup), heading_style="ATX", strip=["script", "style"])
     markdown = clean_archive_links(markdown)
+    markdown = tidy_body(markdown)
 
     archive_date = (
         f"{cap.timestamp[0:4]}-{cap.timestamp[4:6]}-{cap.timestamp[6:8]}"
@@ -376,9 +549,28 @@ def convert_capture(
         "---\n\n"
     )
     body = markdown
-    if not re.match(r"^\s*#\s", body):
+    if re.match(r"^\s*#\s", body):
+        pass  # already opens with an H1
+    elif re.match(r"^\s*#{2,6}\s+", body):
+        # Promote the page's own leading title heading to H1 instead of
+        # prepending a duplicate synthetic title.
+        body = re.sub(r"^\s*#{2,6}\s+", "# ", body, count=1)
+    else:
         body = f"# {title}\n\n{body}"
-    return front_matter + body
+
+    # Per-page attribution footer (CC BY-NC-SA: credit the source, link the
+    # licence, and indicate that the page was reformatted from the archive).
+    attr_link = "../" * rel_md_path.count("/") + "attribution.md"
+    attribution = (
+        "\n\n---\n\n"
+        f"*Archived from [{cap.original}]({cap.original}) "
+        f"([Wayback Machine snapshot]({cap.raw_url})). "
+        "Original work © Some Random Finn / guidesnotincluded.com, licensed "
+        "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). "
+        "Reformatted from HTML to Markdown for this non-commercial community "
+        f"archive — see [Attribution & licensing]({attr_link}).*\n"
+    )
+    return front_matter + body.rstrip() + attribution
 
 
 def write_file(path: Path, content: str) -> None:
