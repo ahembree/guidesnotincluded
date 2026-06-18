@@ -43,6 +43,12 @@ theme:
 
 plugins:
   - search
+  - glightbox:        # click an image to open it full-screen in a closable modal
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      zoomable: true
+      draggable: true
 
 markdown_extensions:
   - abbr
