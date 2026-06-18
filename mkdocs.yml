@@ -65,5 +65,64 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-# Nav is generated automatically from the docs/ tree. Once the crawl is done,
-# you can pin an explicit `nav:` here to control ordering if desired.
+# Grouped navigation. Pages live flat in docs/ (the crawler writes them there);
+# this only controls how they are organised in the sidebar. guides.md (empty in
+# the archive) and home.md (a duplicate of the index/home page) are intentionally
+# left out of the nav — they are still built and reachable by direct link.
+nav:
+  - Home: index.md
+  - Start here:
+      - The very early game: the-very-early-game.md
+      - The early game: the-early-game.md
+      - Complete beginner's guide: complete-beginners-completely-incomplete-guide-to-oxygen-not-included.md
+      - Things I wish I'd known: things-i-wish-id-known-when-i-started.md
+      - Builds overview: builds.md
+      - Base game vs Spaced Out: base-game-versus-spaced-out-dlc.md
+  - Duplicants:
+      - Choosing duplicants: choosing-duplicants.md
+      - How many dupes?: how-many-dupes-should-you-have.md
+      - Atmo suits: atmo-suit-basics.md
+  - Core mechanics:
+      - Pipes and pumps: pipes-and-pumps.md
+      - Liquid lock basics: liquid-lock-basics.md
+      - Liquid lock (build): liquid-lock.md
+  - Oxygen (SPOMs):
+      - What is a SPOM?: to-know-the-spom-is-to-love-the-spom.md
+      - "SPOM — 1 kg/s": spom-1kg-s.md
+      - "SPOM — Full Rodriguez": spom-3kg-s.md
+  - Water & germs:
+      - Getting more water: getting-more-water.md
+      - Decontaminating germy water: decontaminating-germy-water-francis.md
+      - Recycling toilet water: recycling-toilet-water.md
+      - Dealing with slimelung: dealing-with-slimelung.md
+  - Cooling & heat:
+      - Heat transfer basics: heat-transfer-basics.md
+      - "Anti-entropy thermo-nullifier (AETN)": anti-entropy-thermo-nullifier.md
+      - AETN cooling loop: anti-entropy-thermo-nullifier-cooling.md
+      - Aquatuner + steam turbine loop: aquatuner-steam-turbine-cooling-loo.md
+      - Thermo aquatuner cooling loop: thermo-aquatuner-steam-turbine-cooling-loop.md
+  - Power & automation:
+      - Getting started with automation: getting-started-with-automation.md
+      - Carbon skimmer automation: carbon-skimmer-automation-jahws.md
+      - Taming a hydrogen vent: hydrogen-vent-taming.md
+  - Resources & industry:
+      - Getting steel: getting-steel.md
+      - Oil, petroleum & plastic: getting-oil-petroleum-and-plastic.md
+      - Oil well with liquid lock: oil-well-with-liquid-lock.md
+      - Taming metal volcanoes: taming-metal-volcanos.md
+      - Mini industry: mini-industry.md
+  - Ranching:
+      - Ranching basics: ranching-basics.md
+      - Drecko ranching (plastic): low-tech-plastic-drecko-ranching.md
+  - Space & Spaced Out (DLC):
+      - Getting to space: getting-to-space-dlc.md
+      - Spaced Out research: spaced-out-research-guide.md
+      - Dealing with meteor showers: dealing-with-meteor-showers.md
+      - Liquid hydrogen & oxygen: liquid-hydrogen-oxygen-small.md
+  - Drafts & duplicates:
+      - The early game (draft): copy-of-the-early-game.md
+      - Getting to space (draft): copy-of-getting-more-water.md
+      - Work in progress: copy-of-wip.md
+  - About this archive:
+      - Attribution & licensing: attribution.md
+      - Guide feedback: guide-feedback.md
