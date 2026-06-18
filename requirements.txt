@@ -1,0 +1,2 @@
+# Dependencies for building the MkDocs site (used locally and in CI).
+mkdocs-material>=9.5

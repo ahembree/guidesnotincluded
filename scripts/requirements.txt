@@ -1,0 +1,6 @@
+# Dependencies for scripts/crawl_archive.py (the Wayback -> Markdown crawler)
+requests>=2.31
+beautifulsoup4>=4.12
+lxml>=5.0
+markdownify>=0.11
+readability-lxml>=0.8
