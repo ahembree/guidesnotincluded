@@ -1,5 +1,11 @@
-# MkDocs build output
+# MkDocs build output (legacy)
 /site/
+
+# Astro / Node
+node_modules/
+/dist/
+.astro/
+*.log
 
 # Python
 __pycache__/

@@ -1,7 +1,13 @@
 # Runbook: restoring guidesnotincluded.com from the Internet Archive
 
 This procedure crawls the Wayback Machine, converts each archived page to
-Markdown, and serves the result as a MkDocs site on GitHub Pages.
+Markdown, and serves the result as an Astro + Starlight site on GitHub Pages.
+
+> **This is a one-time procedure, and it has already been run.** The converted
+> content is committed under `src/content/docs/guidesnotincluded_archive/`, so to
+> run or deploy the site you only need `pnpm install` + `pnpm build` (see the
+> README). Follow the steps below only to refresh the archive from the Wayback
+> Machine.
 
 ## 0. Prerequisites: network access to the Internet Archive
 
@@ -30,8 +36,8 @@ curl -sI "https://web.archive.org/web/2024id_/https://www.guidesnotincluded.com/
 ## 1. Install dependencies
 
 ```bash
-pip install -r scripts/requirements.txt   # crawler
-pip install -r requirements.txt           # site build (mkdocs-material)
+pip install -r scripts/requirements.txt   # crawler (Python)
+pnpm install                              # site build (Astro/Starlight; pnpm 11, Node 20+)
 ```
 
 ## 2. Inspect the inventory first (optional but recommended)
@@ -49,7 +55,7 @@ the page set looks right.
 
 ```bash
 python3 scripts/crawl_archive.py --domain guidesnotincluded.com --limit 3
-mkdocs serve   # open http://127.0.0.1:8000 and check the conversion quality
+pnpm dev   # open http://localhost:4321/guidesnotincluded/ and check quality
 ```
 
 guidesnotincluded.com was a **Wix** site, so the raw archived HTML can be
@@ -64,36 +70,39 @@ full run.
 python3 scripts/crawl_archive.py --domain guidesnotincluded.com
 ```
 
-Useful flags:
+The crawler writes pages and images into `src/content/docs/guidesnotincluded_archive/` (Starlight's
+content collection). Useful flags:
 
 | Flag | Effect |
-| --- | --- |
+|-|-|
 | `--limit N` | Only convert the first N pages. |
 | `--no-assets` | Skip downloading images. |
 | `--no-subdomains` | Match only the exact domain (no `www.` etc.). |
 | `--sleep S` | Seconds between requests (default 0.5; be polite). |
-| `--docs-dir DIR` | Output directory (default `docs`). |
+| `--docs-dir DIR` | Output directory (default `src/content/docs/guidesnotincluded_archive`). |
+
+New pages are built automatically, but they only appear in the sidebar if you
+add them to the `sidebar` array in `astro.config.mjs` (the nav is curated by
+hand, mirroring the original site's grouping).
 
 ## 5. Review, then build
 
 ```bash
-mkdocs serve            # local preview
-mkdocs build            # produce ./site (gitignored)
+pnpm dev                 # local preview with hot reload
+pnpm build               # produce ./dist (gitignored)
+pnpm preview             # serve the production build locally
 ```
-
-Optionally pin an explicit `nav:` in `mkdocs.yml` to control page ordering;
-by default the nav is generated from the `docs/` tree.
 
 ## 6. Commit and deploy
 
 ```bash
-git add docs mkdocs.yml requirements.txt scripts .github
+git add src public astro.config.mjs package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc scripts .github
 git commit -m "Restore guidesnotincluded.com content from the Internet Archive"
 git push -u origin <branch>
 ```
 
 Merging to `main` triggers `.github/workflows/deploy.yml`, which builds the site
-and deploys to GitHub Pages.
+with `withastro/action` and deploys `./dist` to GitHub Pages.
 
 ### One-time GitHub Pages setup
 

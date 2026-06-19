@@ -1,0 +1,26 @@
+Guides Not Included - licensing NOTICE
+======================================
+
+An unofficial, non-commercial community archive of guidesnotincluded.com.
+This repository is dual-licensed BY FILE:
+
+CONTENT - Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+  Scope:  src/content/docs/guidesnotincluded_archive/ (the Markdown guides),
+          excluding images and any code files.
+  Author: Some Random Finn (guidesnotincluded.com)
+  Texts:  LICENSE (section 1 - summary) and LICENSE-CONTENT (full legal code)
+  Notes:  Every page keeps a source + Wayback-snapshot attribution footer.
+          Adaptations must stay under the same licence; non-commercial only.
+
+CODE - MIT License
+  Scope:  everything else - scripts/, astro.config.mjs, src/ (components,
+          styles, config), and build/CI tooling.
+  Holder: Aidan Hembree
+  Text:   LICENSE-CODE
+
+IMAGES - (c) Klei Entertainment / ONI Wiki / the original author (NOT under CC)
+  Scope:  src/content/docs/guidesnotincluded_archive/assets/
+  Notes:  Game imagery used for non-commercial, fan-content/archival purposes.
+          Rights holders may request removal via GitHub issues.
+
+Full terms and the file-by-file split: see LICENSE, LICENSE-CONTENT, LICENSE-CODE.

@@ -1,0 +1,34 @@
+---
+// SPDX-License-Identifier: MIT
+// Adds the site-wide attribution / licence line under Starlight's default
+// footer — the equivalent of the MkDocs `copyright` setting. Required for
+// licence compliance (see CLAUDE.md). The per-page attribution footer lives in
+// each page's Markdown body and renders above this automatically.
+import Default from '@astrojs/starlight/components/Footer.astro';
+
+const attribution = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/attribution/`;
+---
+
+<Default><slot /></Default>
+
+<div class="gni-copyright">
+  Guides © Some Random Finn
+  (<a href="https://www.guidesnotincluded.com/">guidesnotincluded.com</a>), licensed
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a>.
+  Non-commercial archive via the Internet Archive — game imagery © Klei Entertainment.
+  See <a href={attribution}>Attribution &amp; licensing</a>.
+</div>
+
+<style>
+  .gni-copyright {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--sl-color-gray-5);
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-3);
+    line-height: 1.6;
+  }
+  .gni-copyright a {
+    color: var(--sl-color-text-accent);
+  }
+</style>

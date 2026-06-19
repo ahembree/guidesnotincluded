@@ -8,7 +8,14 @@ This repository is an **unofficial, non-commercial community archive** of
 
 Different parts of this repository are covered by different terms.
 
-## 1. The guide content (everything under `docs/`, excluding images)
+## 1. The guide content (everything under `src/content/docs/guidesnotincluded_archive/`, excluding images and code)
+
+This section covers the **textual guides** under `src/content/docs/guidesnotincluded_archive/` — the prose,
+tables, and structure of the pages. It does **not** cover the images in
+`src/content/docs/guidesnotincluded_archive/assets/` (see §2) and does **not** cover any **source-code
+files** that may live under `src/content/docs/guidesnotincluded_archive/` (e.g. `.js`, `.ts`, `.css` for an
+interactive widget loaded by a page); those are code and fall under §4, even when
+located inside `src/content/docs/guidesnotincluded_archive/`.
 
 The textual guides were published by the original author under a
 **Creative Commons Attribution-NonCommercial-ShareAlike** licence. The author's
@@ -18,7 +25,8 @@ own statement (preserved on the "Complete Beginner's Guide" page) reads:
 > non-commercial use/reuse of my scribblings is fine."
 
 The original did not pin a version, so this archive applies and redistributes
-the text under **CC BY-NC-SA 4.0 International**:
+the text under **CC BY-NC-SA 4.0 International**. The full, verbatim licence text
+is bundled in this repository as [`LICENSE-CONTENT`](LICENSE-CONTENT):
 
 > https://creativecommons.org/licenses/by-nc-sa/4.0/
 > Legal code: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
@@ -39,7 +47,7 @@ extracted from the original Wix HTML, converted to Markdown, images localised,
 and site navigation/boilerplate removed. A few pages are incomplete because the
 source captures were incomplete or unavailable.
 
-## 2. Images (`docs/assets/`)
+## 2. Images (`src/content/docs/guidesnotincluded_archive/assets/`)
 
 Per the original author, the images come from several sources — the
 **Oxygen Not Included Wiki**, the author's own **gameplay footage**, and
@@ -61,11 +69,38 @@ creators, including **Francis John**, **Jahws**, **Mullematsch**, and the
 broader *Oxygen Not Included* community (Reddit, Steam, YouTube). Those credits
 are preserved in the restored pages.
 
-## 4. The crawler / tooling (`scripts/`, `mkdocs.yml`, workflows)
+## 4. The code: crawler, tooling & interactive components (MIT)
 
-The restoration tooling in this repository was written by the repository owner
-and is provided as-is for archival use. It is independent of the content
-licence above.
+All **original code** in this repository was written by the repository owner and
+is licensed under the **MIT License** — see [`LICENSE-CODE`](LICENSE-CODE). This
+covers the crawler and scripts (`scripts/`), the Astro/Starlight build
+configuration and components (`astro.config.mjs`, `src/content.config.ts`,
+`src/components/`, `src/styles/`), and any future source code for interactive
+components and build tooling (`.astro` / `.js` / `.ts` / `.css` files — **including
+such files placed under `src/content/docs/guidesnotincluded_archive/`**). The code licence is independent
+of, and does not affect, the content licence in §1.
+
+## 5. Interactive additions — mixing content and code
+
+You may add interactive components (e.g. calculators, build planners) and other
+custom additions to this archive; CC BY-NC-SA 4.0 permits building upon the work.
+To keep it unambiguous **which licence applies where**, the split is drawn by
+file, never per page:
+
+- **A guide page is content, not software.** A `.md` page stays under §1 (CC
+  BY-NC-SA 4.0) even when it embeds or loads a widget — it merely *references* an
+  MIT-licensed code file. Embedding a tool does not change the page's licence.
+- **A component's code is software, under §4 (MIT)** — keep it in its own
+  `.astro` / `.js` / `.ts` / `.css` files, never inlined into a content `.md` as
+  if it were licensed content.
+- **What a widget *displays* follows what it is.** If a component reproduces the
+  author's words, tables, or data, *that reproduced content* remains CC BY-NC-SA
+  4.0 even though the surrounding code is MIT. Have widgets compute from game
+  constants (Klei / ONI Wiki data — not CC) rather than transcribing the author's
+  prose, and code and content never overlap.
+- Any addition must still **keep the per-page attribution footer** (BY) and stay
+  **non-commercial** (NC): no ads, paywalls, affiliate links, sponsorships, or
+  donation-for-features.
 
 ---
 

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
 """Crawl the Wayback Machine for an archived site and convert it to Markdown.
 
 This tool was built to resurrect https://guidesnotincluded.com (an Oxygen Not
-Included guides site) from the Internet Archive and host the content as a
-MkDocs site in this repository.
+Included guides site) from the Internet Archive and host the content as an
+Astro + Starlight site in this repository.
 
 What it does
 ------------
@@ -11,10 +12,11 @@ What it does
 2. Keeps the *latest* successful (HTTP 200, text/html) capture of each page.
 3. Downloads the raw archived HTML (``id_`` capture mode = no Wayback toolbar).
 4. Extracts the main content + title and converts it to Markdown.
-5. Optionally downloads referenced images into ``docs/assets`` and rewrites
-   the image links to local relative paths.
-6. Writes Markdown files into the MkDocs ``docs/`` tree, mirroring the site's
-   URL structure, with YAML front matter recording the archive provenance.
+5. Optionally downloads referenced images into ``src/content/docs/guidesnotincluded_archive/assets`` and
+   rewrites the image links to local relative paths.
+6. Writes Markdown files into the Starlight ``src/content/docs/guidesnotincluded_archive/`` content
+   collection, mirroring the site's URL structure, with YAML front matter
+   recording the archive provenance.
 
 Requirements: see ``scripts/requirements.txt``.
 
@@ -203,8 +205,8 @@ def url_to_relpath(original: str) -> str:
 
 def resolve_index_collisions(paths: dict[str, str]) -> dict[str, str]:
     """If a page path also needs to be a directory (because other pages nest
-    under it), convert it to ``<dir>/index.md`` so MkDocs treats it as the
-    section landing page.
+    under it), convert it to ``<dir>/index.md`` so it becomes the section's
+    landing page (Starlight renders ``index.md`` as the directory page).
     """
     dirs = set()
     for rel in paths.values():
@@ -407,6 +409,114 @@ def tidy_body(markdown: str) -> str:
     return text.strip() + "\n"
 
 
+def normalize_heading_levels(body: str) -> str:
+    """Give the body a single H1 with no skipped heading levels.
+
+    The Wix source uses heading tags for visual styling, so pages can end up
+    with several `# ` (H1) lines or jumps like H1->H5. This anchors the first
+    heading as the one H1 ("root"); every later heading is forced to >= H2 with
+    no level jumps, while the source's relative nesting is preserved:
+
+    - a heading at the root's level (or shallower) becomes a top-level H2;
+    - a strictly deeper heading nests via a stack of open sub-levels.
+
+    Idempotent on already-clean pages. Only heading lines are touched; fenced
+    code blocks and non-heading lines (incl. ``---`` thematic breaks) pass
+    through unchanged.
+    """
+    out: list[str] = []
+    sub_stack: list[int] = []  # source levels of open sub-sections (deeper than root)
+    root: int | None = None
+    in_fence = False
+    for line in body.split("\n"):
+        if re.match(r"^\s*(```|~~~)", line):
+            in_fence = not in_fence
+            out.append(line)
+            continue
+        m = re.match(r"^(#{1,6})\s+(.*)$", line)  # the space rule skips '---' etc.
+        if in_fence or not m:
+            out.append(line)
+            continue
+        level = len(m.group(1))
+        if root is None:                  # first heading -> the single H1
+            root, new, sub_stack = level, 1, []
+        elif level <= root:               # source sibling-of-title -> top section
+            new, sub_stack = 2, []
+        else:                             # nest below the root, no skips
+            while sub_stack and sub_stack[-1] >= level:
+                sub_stack.pop()
+            new = len(sub_stack) + 2
+            sub_stack.append(level)
+        out.append("#" * new + " " + m.group(2))
+    return "\n".join(out)
+
+
+def make_description(markdown: str, limit: int = 160) -> str:
+    """Build a short meta/OpenGraph description from the first real paragraph
+    of the body (skips headings, images, lists, quotes)."""
+    for para in re.split(r"\n\s*\n", markdown):
+        s = para.strip()
+        if not s or s[0] in "#!|>" or s.startswith(("---", "```")):
+            continue
+        if re.match(r"^([*+\-]|\d+\.)\s", s):  # list item
+            continue
+        s = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", s)       # drop inline images
+        s = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", s)    # links -> their text
+        s = re.sub(r"[*_`>#]", "", s)                     # emphasis / marks
+        s = re.sub(r"\s+", " ", s).strip()
+        if len(s) < 25:
+            continue
+        if len(s) > limit:
+            s = s[:limit].rsplit(" ", 1)[0].rstrip(",.;:—- ") + "…"
+        return s
+    return ""
+
+
+def _raster_size(path: Path) -> tuple[int, int] | None:
+    """Read (width, height) from a PNG/JPEG file header — no Pillow needed."""
+    try:
+        data = path.read_bytes()
+    except OSError:
+        return None
+    if data[:8] == b"\x89PNG\r\n\x1a\n" and data[12:16] == b"IHDR":
+        return int.from_bytes(data[16:20], "big"), int.from_bytes(data[20:24], "big")
+    if data[:2] == b"\xff\xd8":  # JPEG: walk segments to the SOF marker
+        i, n = 2, len(data)
+        while i + 9 < n:
+            if data[i] != 0xFF:
+                i += 1
+                continue
+            marker = data[i + 1]
+            if 0xC0 <= marker <= 0xCF and marker not in (0xC4, 0xC8, 0xCC):
+                return (data[i + 7] << 8) | data[i + 8], (data[i + 5] << 8) | data[i + 6]
+            if marker == 0xD8 or 0xD0 <= marker <= 0xD9:
+                i += 2
+                continue
+            i += 2 + ((data[i + 2] << 8) | data[i + 3])
+    return None
+
+
+def first_card_image(markdown: str, docs_dir: Path, min_w: int = 480, min_h: int = 200) -> str:
+    """First local raster image big enough to be a good social-card preview.
+
+    PNG/JPEG only (AVIF/WebP aren't reliably rendered by social scrapers), and
+    at least ``min_w`` x ``min_h`` so we skip the tiny building/critter icons.
+    Returns a site-root-relative ``assets/...`` path, or "" to fall back to the
+    default branded card."""
+    for m in re.finditer(r"!\[[^\]]*\]\(((?:\.\./)*assets/[^)\s]+\.(?:png|jpe?g))\)",
+                         markdown, re.IGNORECASE):
+        ref = re.sub(r"^(?:\.\./)+", "", m.group(1))
+        size = _raster_size(docs_dir / ref)
+        if not size:
+            continue
+        w, h = size
+        # Big enough, and roughly landscape (~1.91:1 is the social-card frame) so
+        # wide/thin banners and tall images don't get badly cropped.
+        if w >= min_w and h >= min_h and 1.2 <= w / h <= 2.2:
+            return ref
+    return ""
+
+
 # --------------------------------------------------------------------------- #
 # Asset handling
 # --------------------------------------------------------------------------- #
@@ -487,7 +597,7 @@ def download_assets(
     """Download <img> sources and rewrite them to local relative paths."""
     assets_dir = docs_dir / "assets"
     assets_dir.mkdir(parents=True, exist_ok=True)
-    # path from this markdown file back to docs/assets
+    # path from this markdown file back to the assets/ folder
     depth = rel_md_path.count("/")
     rel_prefix = "../" * depth + "assets/"
 
@@ -571,14 +681,19 @@ def convert_capture(
         f"{cap.timestamp[0:4]}-{cap.timestamp[4:6]}-{cap.timestamp[6:8]}"
         if len(cap.timestamp) >= 8 else cap.timestamp
     )
-    front_matter = (
-        "---\n"
-        f"title: {json.dumps(title)}\n"
-        f"source_url: {cap.original}\n"
-        f"archived: {archive_date}\n"
-        f"archive_snapshot: {cap.raw_url}\n"
-        "---\n\n"
-    )
+    description = make_description(markdown)
+    card_image = first_card_image(markdown, docs_dir)
+    fm = ["---", f"title: {json.dumps(title)}"]
+    if description:
+        fm.append(f"description: {json.dumps(description)}")
+    fm += [
+        f"source_url: {cap.original}",
+        f"archived: {archive_date}",
+        f"archive_snapshot: {cap.raw_url}",
+    ]
+    if card_image:
+        fm.append(f"image: {card_image}")
+    front_matter = "\n".join(fm) + "\n---\n\n"
     body = markdown
     if re.match(r"^\s*#\s", body):
         pass  # already opens with an H1
@@ -588,6 +703,14 @@ def convert_capture(
         body = re.sub(r"^\s*#{2,6}\s+", "# ", body, count=1)
     else:
         body = f"# {title}\n\n{body}"
+
+    # Enforce a single H1 + no skipped heading levels (the Wix source is noisy).
+    body = normalize_heading_levels(body)
+
+    # Starlight renders the frontmatter `title` as the page heading, so strip the
+    # body's own leading H1 to avoid a duplicate title (normalize_heading_levels
+    # above guarantees exactly one leading H1 to remove).
+    body = re.sub(r"^\s*#\s+[^\n]*\n+", "", body, count=1)
 
     # Per-page attribution footer (CC BY-NC-SA: credit the source, link the
     # licence, and indicate that the page was reformatted from the archive).
@@ -615,7 +738,7 @@ def write_file(path: Path, content: str) -> None:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--domain", default="guidesnotincluded.com", help="Target domain (default: %(default)s)")
-    ap.add_argument("--docs-dir", default="docs", help="MkDocs docs/ output directory (default: %(default)s)")
+    ap.add_argument("--docs-dir", default="src/content/docs/guidesnotincluded_archive", help="Astro/Starlight content collection directory (default: %(default)s)")
     ap.add_argument("--limit", type=int, default=0, help="Only convert the first N pages (0 = all)")
     ap.add_argument("--no-assets", action="store_true", help="Do not download images")
     ap.add_argument("--no-subdomains", action="store_true", help="Match only the exact domain prefix")

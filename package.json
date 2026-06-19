@@ -1,0 +1,22 @@
+{
+  "name": "guidesnotincluded",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE-CODE",
+  "packageManager": "pnpm@11.8.0",
+  "description": "Astro + Starlight build of the Guides Not Included archive (guidesnotincluded.com restoration).",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "7.2.0",
+    "@astrojs/starlight": "^0.40.0",
+    "astro": "^6.4.0",
+    "sharp": "^0.33.5"
+  }
+}

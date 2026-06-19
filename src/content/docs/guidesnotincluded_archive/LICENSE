@@ -1,0 +1,21 @@
+guidesnotincluded_archive/ — original content, CC BY-NC-SA 4.0
+================================================================
+
+Everything in this folder is the restored content of guidesnotincluded.com,
+written by "Some Random Finn" and published under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International licence:
+
+    https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+This folder exists to make the licence scope obvious: it holds the original
+author's work and nothing else. Everything ELSE in the repository (the crawler,
+the Astro/Starlight build, components, and config) is the maintainer's own work
+under the MIT licence — see ../../../LICENSE-CODE.
+
+  * Markdown in this folder ......... CC BY-NC-SA 4.0 (c) Some Random Finn
+  * Images in assets/ ............... (c) Klei Entertainment / ONI Wiki / the
+                                      author — NOT under CC; fan-content use.
+
+Attribution must be preserved (every page keeps a source + Wayback-snapshot
+credit footer). Do not relicense; keep any adaptation under CC BY-NC-SA 4.0.
+Full terms: the repository-root LICENSE (section 1) and LICENSE-CODE.

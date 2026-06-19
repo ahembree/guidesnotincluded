@@ -1,0 +1,97 @@
+---
+// SPDX-License-Identifier: MIT
+// Restores the SEO / OpenGraph / Twitter / JSON-LD metadata that the MkDocs
+// build emitted via overrides/main.html. Starlight's default <Head> already
+// renders <title>, description, canonical, and og:title/description, so this
+// only ADDS the social-card image and the schema.org JSON-LD. The JSON-LD
+// carries the original author + CC BY-NC-SA licence in machine-readable form,
+// reinforcing attribution (see CLAUDE.md — licensing & attribution).
+import Default from '@astrojs/starlight/components/Head.astro';
+
+const route = Astro.locals.starlightRoute;
+const data = route.entry.data;
+const isHome = route.id === '';
+
+const siteName = 'Guides Not Included';
+const siteDesc =
+  'An archived copy of guidesnotincluded.com — Oxygen Not Included builds, ' +
+  'guides, and resources. Restored from the Internet Archive.';
+
+const pageTitle = isHome ? data.title : `${data.title} · ${siteName}`;
+const description = data.description ?? siteDesc;
+
+const baseNoSlash = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonical = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site).href
+  : Astro.url.href;
+const ogImage = Astro.site
+  ? new URL(`${baseNoSlash}/og-card.png`, Astro.site).href
+  : `${baseNoSlash}/og-card.png`;
+
+// The archive only knows each page's Wayback capture date.
+const modified =
+  data.archived instanceof Date ? data.archived.toISOString().slice(0, 10) : undefined;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': isHome ? 'WebSite' : 'Article',
+  name: pageTitle,
+  description,
+  url: canonical,
+  image: ogImage,
+  inLanguage: 'en',
+  isAccessibleForFree: true,
+  license: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+  author: { '@type': 'Person', name: 'Some Random Finn' },
+  publisher: {
+    '@type': 'Organization',
+    name: siteName,
+    logo: { '@type': 'ImageObject', url: ogImage },
+  },
+  ...(isHome ? {} : { headline: pageTitle, mainEntityOfPage: canonical }),
+  ...(modified ? { datePublished: modified, dateModified: modified } : {}),
+};
+---
+
+<Default><slot /></Default>
+
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:alt" content={pageTitle} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:image" content={ogImage} />
+{modified && <meta property="article:modified_time" content={modified} />}
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+{/* Click-to-zoom lightbox for the build screenshots (replaces mkdocs-glightbox). */}
+<script>
+  function gniInitZoom() {
+    document.querySelectorAll('.sl-markdown-content img').forEach((el) => {
+      const img = el as HTMLImageElement;
+      if (img.dataset.gniZoom) return;
+      img.dataset.gniZoom = '1';
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.className = 'gni-lightbox';
+        const big = document.createElement('img');
+        big.src = img.currentSrc || img.src;
+        big.alt = img.alt;
+        overlay.appendChild(big);
+        const close = () => {
+          overlay.remove();
+          document.removeEventListener('keydown', onKey);
+        };
+        const onKey = (e: KeyboardEvent) => {
+          if (e.key === 'Escape') close();
+        };
+        overlay.addEventListener('click', close);
+        document.addEventListener('keydown', onKey);
+        document.body.appendChild(overlay);
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', gniInitZoom);
+  // Re-run after Starlight client-side navigation, if enabled.
+  document.addEventListener('astro:page-load', gniInitZoom);
+</script>

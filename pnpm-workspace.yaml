@@ -1,0 +1,22 @@
+# Supply-chain hardening for pnpm 11 (see also .npmrc).
+#
+# minimumReleaseAge: refuse to install any package version — direct OR transitive
+#   — published less than 24 hours ago (24 * 60 = 1440 minutes). This is a
+#   cooldown window that blunts fast-moving registry-compromise attacks; pnpm
+#   resolves to the newest version that is already older than the window.
+#   Add `minimumReleaseAgeExclude` entries only for a vetted, urgent security fix.
+minimumReleaseAge: 1440
+
+# strictDepBuilds: fail the install if any dependency wants to run a
+#   lifecycle/build script that is not explicitly decided in `allowBuilds` below.
+#   Blocks the classic malicious-postinstall vector; a NEW build script requires a
+#   conscious decision rather than running silently.
+strictDepBuilds: true
+
+# allowBuilds (pnpm 11; replaces the deprecated onlyBuiltDependencies): only these
+#   trusted, mainstream native packages may run build scripts. esbuild (Vite/Astro
+#   bundler) and sharp (image dimensions) ship platform binaries. Anything not
+#   listed is denied and, with strictDepBuilds, fails the install loudly.
+allowBuilds:
+  esbuild: true
+  sharp: true
